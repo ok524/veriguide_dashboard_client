@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "metronic": {
+    "veriguide-dashboard-client": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -25,6 +25,7 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
+              "src/assets-vg",
               "src/.htaccess"
             ],
             "styles": [
@@ -45,7 +46,8 @@
             ],
 		  	"stylePreprocessorOptions": {
 			  "includePaths": [
-				  "src/assets"
+				  "src/assets",
+				  "src/assets-vg"
 			  ]
 		  	},
             "es5BrowserSupport": true
@@ -81,18 +83,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "metronic:build"
+            "browserTarget": "veriguide-dashboard-client:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "metronic:build:production"
+              "browserTarget": "veriguide-dashboard-client:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "metronic:build"
+            "browserTarget": "veriguide-dashboard-client:build"
           }
         },
         "test": {
@@ -107,7 +109,8 @@
             ],
             "scripts": [],
             "assets": [
-              "src/assets"
+              "src/assets",
+              "src/assets-vg"
             ]
           }
         },
@@ -125,7 +128,7 @@
         }
       }
     },
-    "metronic-e2e": {
+    "veriguide-dashboard-client-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -134,11 +137,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "metronic:serve"
+            "devServerTarget": "veriguide-dashboard-client:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "metronic:serve:production"
+              "devServerTarget": "veriguide-dashboard-client:serve:production"
             }
           }
         },
@@ -154,5 +157,5 @@
       }
     }
   },
-  "defaultProject": "metronic"
+  "defaultProject": "veriguide-dashboard-client"
 }

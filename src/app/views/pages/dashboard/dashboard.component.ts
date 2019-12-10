@@ -17,27 +17,27 @@ export class DashboardComponent implements OnInit {
 	chartOptions2: SparklineChartOptions;
 	chartOptions3: SparklineChartOptions;
 	chartOptions4: SparklineChartOptions;
-	widget4_1: Widget4Data;
-	widget4_2: Widget4Data;
-	widget4_3: Widget4Data;
-	widget4_4: Widget4Data;
+	widget4_1: Widget4Data[];
+	widget4_2: Widget4Data[];
+	widget4_3: Widget4Data[];
+	widget4_4: Widget4Data[];
 
 	constructor(private layoutConfigService: LayoutConfigService) {
 	}
 
 	ngOnInit(): void {
 		this.chartOptions1 = {
-			data: [10, 14, 18, 11, 9, 12, 14, 17, 18, 14],
+			data: [10, 5, 0, 20, 15, 10, 15, 20, 0, 5],
 			color: this.layoutConfigService.getConfig('colors.state.brand'),
 			border: 3
 		};
 		this.chartOptions2 = {
-			data: [11, 12, 18, 13, 11, 12, 15, 13, 19, 15],
+			data: [10, 9, 8, 7, 6, 5, 4, 3, 2, 1],
 			color: this.layoutConfigService.getConfig('colors.state.danger'),
 			border: 3
 		};
 		this.chartOptions3 = {
-			data: [12, 12, 18, 11, 15, 12, 13, 16, 11, 18],
+			data: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
 			color: this.layoutConfigService.getConfig('colors.state.success'),
 			border: 3
 		};
@@ -47,8 +47,7 @@ export class DashboardComponent implements OnInit {
 			border: 3
 		};
 
-		// @ts-ignore
-		this.widget4_1 = shuffle([
+		this.widget4_1 = shuffle<Widget4Data>([
 			{
 				pic: './assets/media/files/doc.svg',
 				title: 'VeriGuide Dashboard Documentation',
@@ -75,7 +74,7 @@ export class DashboardComponent implements OnInit {
 				url: 'https://keenthemes.com.my/metronic',
 			},
 		]);
-		// @ts-ignore
+
 		this.widget4_2 = shuffle([
 			{
 				pic: './assets/media/users/100_4.jpg',
@@ -109,7 +108,7 @@ export class DashboardComponent implements OnInit {
 				buttonClass: 'btn-label-dark'
 			},
 		]);
-		// @ts-ignore
+
 		this.widget4_3 = shuffle([
 			{
 				icon: 'flaticon-pie-chart-1 kt-font-info',
@@ -155,7 +154,7 @@ export class DashboardComponent implements OnInit {
 				valueColor: 'kt-font-focus'
 			},
 		]);
-		// @ts-ignore
+
 		this.widget4_4 = shuffle([
 			{
 				pic: './assets/media/client-logos/logo5.png',

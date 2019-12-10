@@ -1,7 +1,7 @@
 {
-    "name": "metronic-angular",
-    "version": "6.1.5",
-    "description": "Packages used by Angular",
+    "name": "veriguide-dashboard-client",
+    "version": "0.1.0",
+    "description": "Stats Dashboard for VeriGuide admin",
     "scripts": {
         "ng": "ng",
         "start": "node --max_old_space_size=8192 node_modules/@angular/cli/bin/ng serve",
