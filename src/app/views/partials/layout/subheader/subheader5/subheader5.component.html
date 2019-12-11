@@ -15,28 +15,5 @@
 			<!-- <span class="kt-subheader__breadcrumbs-link kt-subheader__breadcrumbs-link--active">Active link</span> -->
 		</div>
 	</div>
-	<div *ngIf="false" class="kt-subheader__toolbar">
-		<div class="kt-subheader__wrapper">
-			<a class="btn kt-subheader__btn-daterange" id="kt_dashboard_daterangepicker" data-placement="left" ngbTooltip="Select dashboard daterange">
-				<span class="kt-subheader__btn-daterange-title" id="kt_dashboard_daterangepicker_title">Today</span>&nbsp;
-				<span class="kt-subheader__btn-daterange-date" id="kt_dashboard_daterangepicker_date">{{today | date:'MMM dd'}}</span>
-				<span class="kt-svg-icon kt-svg-icon--sm"
-					[inlineSVG]="'./assets/media/icons/svg/Communication/Chat-check.svg'"></span>
-			</a>
-
-			<div ngbDropdown [placement]="'bottom-right'" class="dropdown dropdown-inline" data-placement="left" ngbTooltip="Quick actions">
-				<a ngbDropdownToggle href="javascript:;" class="btn btn-icon">
-					<span class="kt-svg-icon kt-svg-icon--success kt-svg-icon--md" [inlineSVG]="'./assets/media/icons/svg/Files/File-plus.svg'"></span>
-				</a>
-				<div ngbDropdownMenu class="dropdown-menu">
-					<a class="dropdown-item"><i class="la la-plus"></i> New Report</a>
-					<a class="dropdown-item"><i class="la la-user"></i> Add Customer</a>
-					<a class="dropdown-item"><i class="la la-cloud-download"></i> New Download</a>
-					<div class="dropdown-divider"></div>
-					<a class="dropdown-item"><i class="la la-cog"></i> Settings</a>
-				</div>
-			</div>
-		</div>
-	</div>
 </div>
 <!-- end:: Content Head -->
