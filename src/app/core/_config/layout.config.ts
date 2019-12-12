@@ -10,15 +10,15 @@ export class LayoutConfig {
         'background-image': './assets/media/misc/bg-1.jpg',
       },
       logo: {
-        desktop: './assets-vg/images/app/logo_veriguide_v2_tp.png',
-        sticky: './assets-vg/images/app/logo_veriguide_v2_tp.png',
+        desktop: './assets-vg/images/app/logo_veriguide_v2.png',
+        sticky: './assets-vg/images/app/logo_veriguide_v2.png',
       },
     },
     // == Page Splash Screen loading
     loader: {
       enabled: true,
       type: 'spinner-logo',
-      logo: './assets-vg/images/app/logo_veriguide_v2_tp.png',
+      logo: './assets-vg/images/app/logo_veriguide_v2.png',
       message: 'Please wait...',
     },
     // == Colors for javascript

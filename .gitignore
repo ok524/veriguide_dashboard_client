@@ -49,5 +49,3 @@ testem.log
 .DS_Store
 Thumbs.db
 yarn-error.log
-src/assets-vg/images/app/logo_veriguide_v2_tp.png
-src/assets/media/bg/bg-auth-vg.jpg
