@@ -97,9 +97,12 @@ export class LoginComponent implements OnInit, OnDestroy {
 	initLoginForm() {
 		// demo message to show
 		if (!this.authNoticeService.onNoticeChanged$.getValue()) {
-			const initialNotice = `Use account
+			const initialNotice = `
+			<strong>For local test:</strong><br />
+			Use account
 			<strong>${DEMO_PARAMS.EMAIL}</strong> and password
-			<strong>${DEMO_PARAMS.PASSWORD}</strong> to continue.`;
+			<strong>${DEMO_PARAMS.PASSWORD}</strong> to continue.
+			`;
 			this.authNoticeService.setNotice(initialNotice, 'info');
 		}
 

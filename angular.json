@@ -23,33 +23,32 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.app.json",
             "assets": [
-              "src/favicon.ico",
               "src/assets",
               "src/assets-vg",
               "src/.htaccess"
             ],
             "styles": [
-              	"src/styles.scss",
-				"node_modules/bootstrap/dist/css/bootstrap.css",
-				"node_modules/perfect-scrollbar/css/perfect-scrollbar.css",
-				"node_modules/socicon/css/socicon.css",
-				"node_modules/@fortawesome/fontawesome-free/css/all.min.css",
-				"src/assets/plugins/line-awesome/css/line-awesome.css",
-				"src/assets/plugins/flaticon/flaticon.css",
-				"src/assets/plugins/flaticon2/flaticon.css",
-				"src/assets/sass/style.angular.scss"
+              "src/styles.scss",
+              "node_modules/bootstrap/dist/css/bootstrap.css",
+              "node_modules/perfect-scrollbar/css/perfect-scrollbar.css",
+              "node_modules/socicon/css/socicon.css",
+              "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
+              "src/assets/plugins/line-awesome/css/line-awesome.css",
+              "src/assets/plugins/flaticon/flaticon.css",
+              "src/assets/plugins/flaticon2/flaticon.css",
+              "src/assets/sass/style.angular.scss"
             ],
             "scripts": [
-				"node_modules/popper.js/dist/umd/popper.js",
-				"node_modules/tooltip.js/dist/umd/tooltip.min.js",
-				"node_modules/perfect-scrollbar/dist/perfect-scrollbar.js"
+              "node_modules/popper.js/dist/umd/popper.js",
+              "node_modules/tooltip.js/dist/umd/tooltip.min.js",
+              "node_modules/perfect-scrollbar/dist/perfect-scrollbar.js"
             ],
-		  	"stylePreprocessorOptions": {
-			  "includePaths": [
-				  "src/assets",
-				  "src/assets-vg"
-			  ]
-		  	},
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/assets",
+                "src/assets-vg"
+              ]
+            },
             "es5BrowserSupport": true
           },
           "configurations": {
@@ -60,8 +59,8 @@
                   "with": "src/environments/environment.prod.ts"
                 }
               ],
-			  "scripts": [],
-			  "optimization": true,
+              "scripts": [],
+              "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
               "extractCss": true,
@@ -83,7 +82,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "veriguide-dashboard-client:build"
+            "browserTarget": "veriguide-dashboard-client:build",
+            "port": 4201
           },
           "configurations": {
             "production": {

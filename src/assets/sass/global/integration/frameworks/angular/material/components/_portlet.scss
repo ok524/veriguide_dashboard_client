@@ -12,17 +12,17 @@
                     display: block;
                 }
             }
-                
+
             .kt-portlet__preview {
                 padding: kt-get($kt-portlet, space, desktop) kt-get($kt-portlet, space, desktop);
             }
-        }    
+        }
 
         .kt-portlet__code-copy {
         	position: absolute;
         	right: 0;
         	top: 10px;
-        	
+
         	i {
         		font-size: 2rem;
         	}
@@ -32,8 +32,8 @@
         			text-decoration: none;
         		}
         	}
-        }  
-    }  
+        }
+    }
 
     // Portlet progress bar
     .kt-portlet__progress-bar__wrapper {
@@ -164,7 +164,7 @@
 					align-items: center;
 					font-size: 1.3rem;
 					font-weight: 500;
-					font-family: Roboto;
+					font-family: 'Red Hat Display';
 					margin: 0;
 					padding: 0;
 				}

@@ -167,11 +167,20 @@ $kt-social-colors: (
 
 // Root Font Settings
 $kt-font-families: (
-    regular: unquote('Poppins, Helvetica, sans-serif'),
-    heading: unquote('Poppins, Helvetica, sans-serif')
+  regular: unquote('Red Hat Display, sans-serif, Helvetica'),
+  heading: unquote('Red Hat Display, sans-serif, Helvetica')
 ) !default;
 
 // Root Font Settings
+$kt-font-size: (
+  size: (
+    desktop: 18px,
+    tablet: 16px,
+    mobile: 14px
+  ),
+  weight: 300
+) !default;
+/*
 $kt-font-size: (
     size: (
         desktop: 13px,
@@ -180,7 +189,7 @@ $kt-font-size: (
     ),
     weight: 300
 ) !default;
-
+*/
 // General Link Settings
 $kt-font-color: (
     text: #646c9a,
