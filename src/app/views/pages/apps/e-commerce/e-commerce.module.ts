@@ -19,31 +19,31 @@ import { FakeApiService } from '../../../../core/_base/layout';
 import { ModuleGuard } from '../../../../core/auth';
 // Core => Services
 import {
-	customersReducer,
-	CustomerEffects,
-	CustomersService,
-	productsReducer,
-	ProductEffects,
-	ProductsService,
-	productRemarksReducer,
-	ProductRemarkEffects,
-	ProductRemarksService,
-	productSpecificationsReducer,
-	ProductSpecificationEffects,
-	ProductSpecificationsService
+  customersReducer,
+  CustomerEffects,
+  CustomersService,
+  productsReducer,
+  ProductEffects,
+  ProductsService,
+  productRemarksReducer,
+  ProductRemarkEffects,
+  ProductRemarksService,
+  productSpecificationsReducer,
+  ProductSpecificationEffects,
+  ProductSpecificationsService
 } from '../../../../core/e-commerce';
 // Core => Utils
 import { HttpUtilsService,
-	TypesUtilsService,
-	InterceptService,
-	LayoutUtilsService
+  TypesUtilsService,
+  InterceptService,
+  LayoutUtilsService
 } from '../../../../core/_base/crud';
 // Shared
 import {
-	ActionNotificationComponent,
-	DeleteEntityDialogComponent,
-	FetchEntityDialogComponent,
-	UpdateStatusDialogComponent
+  ActionNotificationComponent,
+  DeleteEntityDialogComponent,
+  FetchEntityDialogComponent,
+  UpdateStatusDialogComponent
 } from '../../../partials/content/crud';
 // Components
 import { ECommerceComponent } from './e-commerce.component';
@@ -61,27 +61,27 @@ import { OrdersListComponent } from './orders/orders-list/orders-list.component'
 import { OrderEditComponent } from './orders/order-edit/order-edit.component';
 // Material
 import {
-	MatInputModule,
-	MatPaginatorModule,
-	MatProgressSpinnerModule,
-	MatSortModule,
-	MatTableModule,
-	MatSelectModule,
-	MatMenuModule,
-	MatProgressBarModule,
-	MatButtonModule,
-	MatCheckboxModule,
-	MatDialogModule,
-	MatTabsModule,
-	MatNativeDateModule,
-	MatCardModule,
-	MatRadioModule,
-	MatIconModule,
-	MatDatepickerModule,
-	MatAutocompleteModule,
-	MAT_DIALOG_DEFAULT_OPTIONS,
-	MatSnackBarModule,
-	MatTooltipModule
+  MatInputModule,
+  MatPaginatorModule,
+  MatProgressSpinnerModule,
+  MatSortModule,
+  MatTableModule,
+  MatSelectModule,
+  MatMenuModule,
+  MatProgressBarModule,
+  MatButtonModule,
+  MatCheckboxModule,
+  MatDialogModule,
+  MatTabsModule,
+  MatNativeDateModule,
+  MatCardModule,
+  MatRadioModule,
+  MatIconModule,
+  MatDatepickerModule,
+  MatAutocompleteModule,
+  MAT_DIALOG_DEFAULT_OPTIONS,
+  MatSnackBarModule,
+  MatTooltipModule
 } from '@angular/material';
 import { environment } from '../../../../../environments/environment';
 import { CoreModule } from '../../../../core/core.module';
@@ -90,138 +90,138 @@ import { NgxPermissionsModule } from 'ngx-permissions';
 
 // tslint:disable-next-line:class-name
 const routes: Routes = [
-	{
-		path: '',
-		component: ECommerceComponent,
-		// canActivate: [ModuleGuard],
-		// data: { moduleName: 'ecommerce' },
-		children: [
-			{
-				path: '',
-				redirectTo: 'customers',
-				pathMatch: 'full'
-			},
-			{
-				path: 'customers',
-				component: CustomersListComponent
-			},
-			{
-				path: 'orders',
-				component: OrdersListComponent
-			},
-			{
-				path: 'products',
-				component: ProductsListComponent,
-			},
-			{
-				path: 'products/add',
-				component: ProductEditComponent
-			},
-			{
-				path: 'products/edit',
-				component: ProductEditComponent
-			},
-			{
-				path: 'products/edit/:id',
-				component: ProductEditComponent
-			},
-		]
-	}
+  {
+    path: '',
+    component: ECommerceComponent,
+    // canActivate: [ModuleGuard],
+    // data: { moduleName: 'ecommerce' },
+    children: [
+      {
+        path: '',
+        redirectTo: 'customers',
+        pathMatch: 'full'
+      },
+      {
+        path: 'customers',
+        component: CustomersListComponent
+      },
+      {
+        path: 'orders',
+        component: OrdersListComponent
+      },
+      {
+        path: 'products',
+        component: ProductsListComponent,
+      },
+      {
+        path: 'products/add',
+        component: ProductEditComponent
+      },
+      {
+        path: 'products/edit',
+        component: ProductEditComponent
+      },
+      {
+        path: 'products/edit/:id',
+        component: ProductEditComponent
+      },
+    ]
+  }
 ];
 
 @NgModule({
-	imports: [
-		MatDialogModule,
-		CommonModule,
-		HttpClientModule,
-		PartialsModule,
-		NgxPermissionsModule.forChild(),
-		RouterModule.forChild(routes),
-		FormsModule,
-		ReactiveFormsModule,
-		TranslateModule.forChild(),
-		MatButtonModule,
-		MatMenuModule,
-		MatSelectModule,
+  imports: [
+    MatDialogModule,
+    CommonModule,
+    HttpClientModule,
+    PartialsModule,
+    NgxPermissionsModule.forChild(),
+    RouterModule.forChild(routes),
+    FormsModule,
+    ReactiveFormsModule,
+    TranslateModule.forChild(),
+    MatButtonModule,
+    MatMenuModule,
+    MatSelectModule,
         MatInputModule,
-		MatTableModule,
-		MatAutocompleteModule,
-		MatRadioModule,
-		MatIconModule,
-		MatNativeDateModule,
-		MatProgressBarModule,
-		MatDatepickerModule,
-		MatCardModule,
-		MatPaginatorModule,
-		MatSortModule,
-		MatCheckboxModule,
-		MatProgressSpinnerModule,
-		MatSnackBarModule,
-		MatTabsModule,
-		MatTooltipModule,
-		NgbProgressbarModule,
-		environment.isMockEnabled ? HttpClientInMemoryWebApiModule.forFeature(FakeApiService, {
-			passThruUnknownUrl: true,
-        	dataEncapsulation: false
-		}) : [],
-		StoreModule.forFeature('products', productsReducer),
-		EffectsModule.forFeature([ProductEffects]),
-		StoreModule.forFeature('customers', customersReducer),
-		EffectsModule.forFeature([CustomerEffects]),
-		StoreModule.forFeature('productRemarks', productRemarksReducer),
-		EffectsModule.forFeature([ProductRemarkEffects]),
-		StoreModule.forFeature('productSpecifications', productSpecificationsReducer),
-		EffectsModule.forFeature([ProductSpecificationEffects]),
-	],
-	providers: [
-		ModuleGuard,
-		InterceptService,
-      	{
-        	provide: HTTP_INTERCEPTORS,
-       	 	useClass: InterceptService,
-        	multi: true
-      	},
-		{
-			provide: MAT_DIALOG_DEFAULT_OPTIONS,
-			useValue: {
-				hasBackdrop: true,
-				panelClass: 'kt-mat-dialog-container__wrapper',
-				height: 'auto',
-				width: '900px'
-			}
-		},
-		TypesUtilsService,
-		LayoutUtilsService,
-		HttpUtilsService,
-		CustomersService,
-		ProductRemarksService,
-		ProductSpecificationsService,
-		ProductsService,
-		TypesUtilsService,
-		LayoutUtilsService
-	],
-	entryComponents: [
-		ActionNotificationComponent,
-		CustomerEditDialogComponent,
-		DeleteEntityDialogComponent,
-		FetchEntityDialogComponent,
-		UpdateStatusDialogComponent,
-		SpecificationEditDialogComponent
-	],
-	declarations: [
-		ECommerceComponent,
-		// Customers
-		CustomersListComponent,
-		CustomerEditDialogComponent,
-		// Orders
-		OrdersListComponent,
-		OrderEditComponent,
-		// Products
-		ProductsListComponent,
-		ProductEditComponent,
-		RemarksListComponent,
-		SpecificationsListComponent,
-		SpecificationEditDialogComponent
-	]
+    MatTableModule,
+    MatAutocompleteModule,
+    MatRadioModule,
+    MatIconModule,
+    MatNativeDateModule,
+    MatProgressBarModule,
+    MatDatepickerModule,
+    MatCardModule,
+    MatPaginatorModule,
+    MatSortModule,
+    MatCheckboxModule,
+    MatProgressSpinnerModule,
+    MatSnackBarModule,
+    MatTabsModule,
+    MatTooltipModule,
+    NgbProgressbarModule,
+    environment.isMockEnabled ? HttpClientInMemoryWebApiModule.forFeature(FakeApiService, {
+      passThruUnknownUrl: true,
+          dataEncapsulation: false
+    }) : [],
+    StoreModule.forFeature('products', productsReducer),
+    EffectsModule.forFeature([ProductEffects]),
+    StoreModule.forFeature('customers', customersReducer),
+    EffectsModule.forFeature([CustomerEffects]),
+    StoreModule.forFeature('productRemarks', productRemarksReducer),
+    EffectsModule.forFeature([ProductRemarkEffects]),
+    StoreModule.forFeature('productSpecifications', productSpecificationsReducer),
+    EffectsModule.forFeature([ProductSpecificationEffects]),
+  ],
+  providers: [
+    ModuleGuard,
+    InterceptService,
+        {
+          provide: HTTP_INTERCEPTORS,
+            useClass: InterceptService,
+          multi: true
+        },
+    {
+      provide: MAT_DIALOG_DEFAULT_OPTIONS,
+      useValue: {
+        hasBackdrop: true,
+        panelClass: 'kt-mat-dialog-container__wrapper',
+        height: 'auto',
+        width: '900px'
+      }
+    },
+    TypesUtilsService,
+    LayoutUtilsService,
+    HttpUtilsService,
+    CustomersService,
+    ProductRemarksService,
+    ProductSpecificationsService,
+    ProductsService,
+    TypesUtilsService,
+    LayoutUtilsService
+  ],
+  entryComponents: [
+    ActionNotificationComponent,
+    CustomerEditDialogComponent,
+    DeleteEntityDialogComponent,
+    FetchEntityDialogComponent,
+    UpdateStatusDialogComponent,
+    SpecificationEditDialogComponent
+  ],
+  declarations: [
+    ECommerceComponent,
+    // Customers
+    CustomersListComponent,
+    CustomerEditDialogComponent,
+    // Orders
+    OrdersListComponent,
+    OrderEditComponent,
+    // Products
+    ProductsListComponent,
+    ProductEditComponent,
+    RemarksListComponent,
+    SpecificationsListComponent,
+    SpecificationEditDialogComponent
+  ]
 })
 export class ECommerceModule { }

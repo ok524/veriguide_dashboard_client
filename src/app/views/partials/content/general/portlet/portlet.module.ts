@@ -12,24 +12,24 @@ import { PortletBodyComponent } from './portlet-body.component';
 import { PortletFooterComponent } from './portlet-footer.component';
 
 @NgModule({
-	imports: [
-		CommonModule,
-		CoreModule,
-		MatProgressSpinnerModule,
-		MatProgressBarModule
-	],
-	declarations: [
-		PortletComponent,
-		PortletHeaderComponent,
-		PortletBodyComponent,
-		PortletFooterComponent,
-	],
-	exports: [
-		PortletComponent,
-		PortletHeaderComponent,
-		PortletBodyComponent,
-		PortletFooterComponent,
-	]
+  imports: [
+    CommonModule,
+    CoreModule,
+    MatProgressSpinnerModule,
+    MatProgressBarModule
+  ],
+  declarations: [
+    PortletComponent,
+    PortletHeaderComponent,
+    PortletBodyComponent,
+    PortletFooterComponent,
+  ],
+  exports: [
+    PortletComponent,
+    PortletHeaderComponent,
+    PortletBodyComponent,
+    PortletFooterComponent,
+  ]
 })
 export class PortletModule {
 }

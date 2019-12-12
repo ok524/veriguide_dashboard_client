@@ -16,22 +16,22 @@ import { PortletModule } from '../portlet/portlet.module';
 import { HighlightModule } from 'ngx-highlightjs';
 
 @NgModule({
-	imports: [
-		CommonModule,
-		CoreModule,
-		HighlightModule,
-		PerfectScrollbarModule,
-		PortletModule,
-		ClipboardModule,
+  imports: [
+    CommonModule,
+    CoreModule,
+    HighlightModule,
+    PerfectScrollbarModule,
+    PortletModule,
+    ClipboardModule,
 
-		// angular material modules
-		MatTabsModule,
-		MatExpansionModule,
-		MatCardModule,
-		MatIconModule,
-	],
-	exports: [MaterialPreviewComponent],
-	declarations: [MaterialPreviewComponent]
+    // angular material modules
+    MatTabsModule,
+    MatExpansionModule,
+    MatCardModule,
+    MatIconModule,
+  ],
+  exports: [MaterialPreviewComponent],
+  declarations: [MaterialPreviewComponent]
 })
 export class MaterialPreviewModule {
 }

@@ -5,52 +5,52 @@ import { NgForm } from '@angular/forms';
 import { LayoutConfigModel, LayoutConfigService } from '../../../../core/_base/layout';
 
 @Component({
-	selector: 'kt-builder',
-	templateUrl: './builder.component.html',
-	styleUrls: ['./builder.component.scss']
+  selector: 'kt-builder',
+  templateUrl: './builder.component.html',
+  styleUrls: ['./builder.component.scss']
 })
 export class BuilderComponent implements OnInit {
-	// Public properties
-	model: LayoutConfigModel;
-	@ViewChild('form', {static: true}) form: NgForm;
+  // Public properties
+  model: LayoutConfigModel;
+  @ViewChild('form', {static: true}) form: NgForm;
 
-	/**
+  /**
 	 * Component constructor
 	 *
 	 * @param layoutConfigService: LayoutConfigService
 	 */
-	constructor(private layoutConfigService: LayoutConfigService) {
-	}
+  constructor(private layoutConfigService: LayoutConfigService) {
+  }
 
-	/**
+  /**
 	 * @ Lifecycle sequences => https://angular.io/guide/lifecycle-hooks
 	 */
 
-	/**
+  /**
 	 * On init
 	 */
-	ngOnInit(): void {
-		this.model = this.layoutConfigService.getConfig();
-	}
+  ngOnInit(): void {
+    this.model = this.layoutConfigService.getConfig();
+  }
 
-	/**
+  /**
 	 * Reset preview
 	 *
 	 * @param e: Event
 	 */
-	resetPreview(e: Event): void {
-		e.preventDefault();
-		this.layoutConfigService.resetConfig();
-		location.reload();
-	}
+  resetPreview(e: Event): void {
+    e.preventDefault();
+    this.layoutConfigService.resetConfig();
+    location.reload();
+  }
 
-	/**
+  /**
 	 * Submit preview
 	 *
 	 * @param e: Event
 	 */
-	submitPreview(e: Event): void {
-		this.layoutConfigService.setConfig(this.model, true);
-		location.reload();
-	}
+  submitPreview(e: Event): void {
+    this.layoutConfigService.setConfig(this.model, true);
+    location.reload();
+  }
 }

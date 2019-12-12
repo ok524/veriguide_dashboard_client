@@ -15,39 +15,39 @@ import { Widget26Component } from './widget26/widget26.component';
 import { Timeline2Component } from './timeline2/timeline2.component';
 
 @NgModule({
-	declarations: [
-		DataTableComponent,
-		// Widgets
-		Widget1Component,
-		Widget4Component,
-		Widget5Component,
-		Widget12Component,
-		Widget14Component,
-		Widget26Component,
-		Timeline2Component,
-	],
-	exports: [
-		DataTableComponent,
-		// Widgets
-		Widget1Component,
-		Widget4Component,
-		Widget5Component,
-		Widget12Component,
-		Widget14Component,
-		Widget26Component,
-		Timeline2Component,
-	],
-	imports: [
-		CommonModule,
-		PerfectScrollbarModule,
-		MatTableModule,
-		CoreModule,
-		MatIconModule,
-		MatButtonModule,
-		MatProgressSpinnerModule,
-		MatPaginatorModule,
-		MatSortModule,
-	]
+  declarations: [
+    DataTableComponent,
+    // Widgets
+    Widget1Component,
+    Widget4Component,
+    Widget5Component,
+    Widget12Component,
+    Widget14Component,
+    Widget26Component,
+    Timeline2Component,
+  ],
+  exports: [
+    DataTableComponent,
+    // Widgets
+    Widget1Component,
+    Widget4Component,
+    Widget5Component,
+    Widget12Component,
+    Widget14Component,
+    Widget26Component,
+    Timeline2Component,
+  ],
+  imports: [
+    CommonModule,
+    PerfectScrollbarModule,
+    MatTableModule,
+    CoreModule,
+    MatIconModule,
+    MatButtonModule,
+    MatProgressSpinnerModule,
+    MatPaginatorModule,
+    MatSortModule,
+  ]
 })
 export class WidgetModule {
 }

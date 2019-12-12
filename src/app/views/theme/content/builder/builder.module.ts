@@ -18,26 +18,26 @@ import { CoreModule } from '../../../../core/core.module';
 import { BuilderComponent } from './builder.component';
 
 @NgModule({
-	imports: [
-		CommonModule,
-		PartialsModule,
-		FormsModule,
-		MatTabsModule,
-		CoreModule,
-		PerfectScrollbarModule,
-		HighlightModule,
-		RouterModule.forChild([
-			{
-				path: '',
-				component: BuilderComponent
-			}
-		]),
+  imports: [
+    CommonModule,
+    PartialsModule,
+    FormsModule,
+    MatTabsModule,
+    CoreModule,
+    PerfectScrollbarModule,
+    HighlightModule,
+    RouterModule.forChild([
+      {
+        path: '',
+        component: BuilderComponent
+      }
+    ]),
 
-		// ng-bootstrap modules
-		NgbTabsetModule,
-	],
-	providers: [],
-	declarations: [BuilderComponent]
+    // ng-bootstrap modules
+    NgbTabsetModule,
+  ],
+  providers: [],
+  declarations: [BuilderComponent]
 })
 export class BuilderModule {
 }

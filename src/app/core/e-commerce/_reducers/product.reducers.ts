@@ -48,11 +48,11 @@ export function productsReducer(state = initialProductsState, action: ProductAct
             const _partialProducts: Update<ProductModel>[] = [];
             for (let i = 0; i < action.payload.products.length; i++) {
                 _partialProducts.push({
-				    id: action.payload.products[i].id,
-				    changes: {
+            id: action.payload.products[i].id,
+            changes: {
                         status: action.payload.status
                     }
-			    });
+          });
             }
             return adapter.updateMany(_partialProducts, state);
         }

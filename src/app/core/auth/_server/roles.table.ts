@@ -1,5 +1,5 @@
 export class RolesTable {
-	public static roles: any = [
+  public static roles: any = [
         {
             id: 1,
             title: 'Administrator',
@@ -10,13 +10,13 @@ export class RolesTable {
             id: 2,
             title: 'Manager',
             isCoreRole: false,
-			permissions: [3, 4, 10]
+      permissions: [3, 4, 10]
         },
         {
             id: 3,
             title: 'Guest',
             isCoreRole: false,
-			permissions: []
+      permissions: []
         }
     ];
 }

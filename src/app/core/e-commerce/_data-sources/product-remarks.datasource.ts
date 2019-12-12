@@ -8,21 +8,21 @@ import { BaseDataSource, QueryResultsModel } from '../../_base/crud';
 import { AppState } from '../../reducers';
 import { selectProductRemarksInStore, selectProductRemarksPageLoading, selectPRShowInitWaitingMessage } from '../_selectors/product-remark.selectors';
 export class ProductRemarksDataSource extends BaseDataSource {
-	constructor(private store: Store<AppState>) {
-		super();
+  constructor(private store: Store<AppState>) {
+    super();
 
-		this.store.pipe(
-			select(selectProductRemarksInStore),
-			debounceTime(600)
-		).subscribe((response: QueryResultsModel) => {
-			this.entitySubject.next(response.items);
-			this.paginatorTotalSubject.next(response.totalCount);
-		});
+    this.store.pipe(
+      select(selectProductRemarksInStore),
+      debounceTime(600)
+    ).subscribe((response: QueryResultsModel) => {
+      this.entitySubject.next(response.items);
+      this.paginatorTotalSubject.next(response.totalCount);
+    });
 
-		this.isPreloadTextViewed$ = this.store.pipe(
-			select(selectPRShowInitWaitingMessage)
-		);
+    this.isPreloadTextViewed$ = this.store.pipe(
+      select(selectPRShowInitWaitingMessage)
+    );
 
-		this.loading$ = this.store.pipe(select(selectProductRemarksPageLoading));
-	}
+    this.loading$ = this.store.pipe(select(selectProductRemarksPageLoading));
+  }
 }

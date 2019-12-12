@@ -17,5 +17,5 @@ export class Permission extends BaseModel {
         this.isSelected = false;
         this.name = '';
         this._children = [];
-	}
+  }
 }

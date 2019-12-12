@@ -52,11 +52,11 @@ export function customersReducer(state = initialCustomersState, action: Customer
             // tslint:disable-next-line:prefer-const
             for (let i = 0; i < action.payload.customers.length; i++) {
                 _partialCustomers.push({
-				    id: action.payload.customers[i].id,
-				    changes: {
+            id: action.payload.customers[i].id,
+            changes: {
                         status: action.payload.status
                     }
-			    });
+          });
             }
             return adapter.updateMany(_partialCustomers, state);
         }

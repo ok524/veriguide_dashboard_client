@@ -8,21 +8,21 @@ import { PartialsModule } from '../../partials/partials.module';
 import { DashboardComponent } from './dashboard.component';
 
 @NgModule({
-	imports: [
-		CommonModule,
-		PartialsModule,
-		CoreModule,
-		RouterModule.forChild([
-			{
-				path: '',
-				component: DashboardComponent
-			},
-		]),
-	],
-	providers: [],
-	declarations: [
-		DashboardComponent,
-	]
+  imports: [
+    CommonModule,
+    PartialsModule,
+    CoreModule,
+    RouterModule.forChild([
+      {
+        path: '',
+        component: DashboardComponent
+      },
+    ]),
+  ],
+  providers: [],
+  declarations: [
+    DashboardComponent,
+  ]
 })
 export class DashboardModule {
 }

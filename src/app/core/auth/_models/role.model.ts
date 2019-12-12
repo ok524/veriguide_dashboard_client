@@ -11,5 +11,5 @@ export class Role extends BaseModel {
         this.title = '';
         this.permissions = [];
         this.isCoreRole = false;
-	}
+  }
 }

@@ -1,5 +1,5 @@
 export class PermissionsTable {
-	public static permissions: any = [
+  public static permissions: any = [
         {
             id: 1,
             name: 'accessToECommerceModule',

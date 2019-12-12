@@ -22,68 +22,68 @@ import { AuthNoticeComponent } from './auth-notice/auth-notice.component';
 import { AuthEffects, AuthGuard, authReducer, AuthService } from '../../../core/auth';
 
 const routes: Routes = [
-	{
-		path: '',
-		component: AuthComponent,
-		children: [
-			{
-				path: '',
-				redirectTo: 'login',
-				pathMatch: 'full'
-			},
-			{
-				path: 'login',
-				component: LoginComponent,
-				data: {returnUrl: window.location.pathname}
-			},
-			{
-				path: 'forgot-password',
-				component: ForgotPasswordComponent,
-			}
-		]
-	}
+  {
+    path: '',
+    component: AuthComponent,
+    children: [
+      {
+        path: '',
+        redirectTo: 'login',
+        pathMatch: 'full'
+      },
+      {
+        path: 'login',
+        component: LoginComponent,
+        data: {returnUrl: window.location.pathname}
+      },
+      {
+        path: 'forgot-password',
+        component: ForgotPasswordComponent,
+      }
+    ]
+  }
 ];
 
 
 @NgModule({
-	imports: [
-		CommonModule,
-		FormsModule,
-		ReactiveFormsModule,
-		MatButtonModule,
-		RouterModule.forChild(routes),
-		MatInputModule,
-		MatFormFieldModule,
-		MatCheckboxModule,
-		TranslateModule.forChild(),
-		StoreModule.forFeature('auth', authReducer),
-		EffectsModule.forFeature([AuthEffects])
-	],
-	providers: [
-		InterceptService,
-		{
-			provide: HTTP_INTERCEPTORS,
-			useClass: InterceptService,
-			multi: true
-		},
-	],
-	exports: [AuthComponent],
-	declarations: [
-		AuthComponent,
-		LoginComponent,
-		ForgotPasswordComponent,
-		AuthNoticeComponent
-	]
+  imports: [
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatButtonModule,
+    RouterModule.forChild(routes),
+    MatInputModule,
+    MatFormFieldModule,
+    MatCheckboxModule,
+    TranslateModule.forChild(),
+    StoreModule.forFeature('auth', authReducer),
+    EffectsModule.forFeature([AuthEffects])
+  ],
+  providers: [
+    InterceptService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: InterceptService,
+      multi: true
+    },
+  ],
+  exports: [AuthComponent],
+  declarations: [
+    AuthComponent,
+    LoginComponent,
+    ForgotPasswordComponent,
+    AuthNoticeComponent
+  ]
 })
 
 export class AuthModule {
-	static forRoot(): ModuleWithProviders {
-		return {
-			ngModule: AuthModule,
-			providers: [
-				AuthService,
-				AuthGuard
-			]
-		};
-	}
+  static forRoot(): ModuleWithProviders {
+    return {
+      ngModule: AuthModule,
+      providers: [
+        AuthService,
+        AuthGuard
+      ]
+    };
+  }
 }

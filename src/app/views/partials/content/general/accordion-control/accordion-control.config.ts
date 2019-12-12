@@ -8,6 +8,6 @@ import {Injectable} from '@angular/core';
  */
 @Injectable()
 export class AccordionControlConfig {
-	closeOthers = false;
+  closeOthers = false;
   type: string;
 }

@@ -6,15 +6,15 @@ import { RouterModule } from '@angular/router';
 import { MailComponent } from './mail.component';
 
 @NgModule({
-	imports: [
-		CommonModule,
-		RouterModule.forChild([
-			{
-				path: '',
-				component: MailComponent
-			}
-		])
-	],
-	declarations: [MailComponent]
+  imports: [
+    CommonModule,
+    RouterModule.forChild([
+      {
+        path: '',
+        component: MailComponent
+      }
+    ])
+  ],
+  declarations: [MailComponent]
 })
 export class MailModule {}

@@ -12,19 +12,19 @@ import { ECommerceModule } from './apps/e-commerce/e-commerce.module';
 import { UserManagementModule } from './user-management/user-management.module';
 
 @NgModule({
-	declarations: [],
-	exports: [],
-	imports: [
-		CommonModule,
-		HttpClientModule,
-		FormsModule,
-		CoreModule,
-		PartialsModule,
-		MailModule,
-		ECommerceModule,
-		UserManagementModule,
-	],
-	providers: []
+  declarations: [],
+  exports: [],
+  imports: [
+    CommonModule,
+    HttpClientModule,
+    FormsModule,
+    CoreModule,
+    PartialsModule,
+    MailModule,
+    ECommerceModule,
+    UserManagementModule,
+  ],
+  providers: []
 })
 export class PagesModule {
 }
