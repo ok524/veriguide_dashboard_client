@@ -13,6 +13,7 @@ export const locale = {
       FEATURES: '特征',
       APPS: '应用',
       DASHBOARD: '仪表板',
+      DOCUMENT_STAT: 'Document Stat',
     },
     AUTH: {
       GENERAL: {

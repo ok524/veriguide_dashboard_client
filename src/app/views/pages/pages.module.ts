@@ -10,6 +10,7 @@ import { CoreModule } from '../../core/core.module';
 import { MailModule } from './apps/mail/mail.module';
 import { ECommerceModule } from './apps/e-commerce/e-commerce.module';
 import { UserManagementModule } from './user-management/user-management.module';
+import { DocumentStatLandingModule } from './document-stat-landing/document-stat-landing.module';
 
 @NgModule({
   declarations: [],
@@ -23,6 +24,7 @@ import { UserManagementModule } from './user-management/user-management.module';
     MailModule,
     ECommerceModule,
     UserManagementModule,
+    DocumentStatLandingModule,
   ],
   providers: []
 })

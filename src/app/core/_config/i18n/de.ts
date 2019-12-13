@@ -12,7 +12,8 @@ export const locale = {
       PAGES: 'Pages',
       FEATURES: 'Eigenschaften',
       APPS: 'Apps',
-      DASHBOARD: 'Instrumententafel'
+      DASHBOARD: 'Instrumententafel',
+      DOCUMENT_STAT: 'Document Stat',
     },
     AUTH: {
       GENERAL: {

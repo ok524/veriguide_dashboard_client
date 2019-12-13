@@ -10,6 +10,13 @@ export class MenuConfig {
           page: '/dashboard',
           translate: 'MENU.DASHBOARD',
         },
+        {
+          title: 'Document Stat',
+          root: true,
+          alignment: 'left',
+          page: '/document-stat',
+          translate: 'MENU.DOCUMENT_STAT',
+        },
       ]
     },
     aside: {
@@ -21,6 +28,14 @@ export class MenuConfig {
           icon: 'flaticon2-architecture-and-city',
           page: '/dashboard',
           translate: 'MENU.DASHBOARD',
+          bullet: 'dot',
+        },
+        {
+          title: 'Document Stat',
+          root: true,
+          icon: 'flaticon2-architecture-and-city',
+          page: '/document-stat',
+          translate: 'MENU.DOCUMENT_STAT',
           bullet: 'dot',
         },
         {

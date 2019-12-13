@@ -12,7 +12,8 @@ export const locale = {
       PAGES: 'Pages',
       FEATURES: 'Caracteristicas',
       APPS: 'Aplicaciones',
-      DASHBOARD: 'Tablero'
+      DASHBOARD: 'Tablero',
+      DOCUMENT_STAT: 'Document Stat',
     },
     AUTH: {
       GENERAL: {
