@@ -13,6 +13,7 @@ import { Widget12Component } from './widget12/widget12.component';
 import { Widget14Component } from './widget14/widget14.component';
 import { Widget26Component } from './widget26/widget26.component';
 import { Timeline2Component } from './timeline2/timeline2.component';
+import { WidgetFiguresComponent } from './widget-figures/widget-figures.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { Timeline2Component } from './timeline2/timeline2.component';
     Widget14Component,
     Widget26Component,
     Timeline2Component,
+    WidgetFiguresComponent,
   ],
   exports: [
     DataTableComponent,
@@ -36,6 +38,7 @@ import { Timeline2Component } from './timeline2/timeline2.component';
     Widget14Component,
     Widget26Component,
     Timeline2Component,
+    WidgetFiguresComponent,
   ],
   imports: [
     CommonModule,
