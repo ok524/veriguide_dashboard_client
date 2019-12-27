@@ -7,38 +7,44 @@ export interface Config {
 }
 
 export interface ChartData {
-  widget_layout: Array<Array<Object>>;
-  submission_id: string;
-  submission_timestamp: Number;
-  job_timestamp: Number;
-  length_by_sentence: Number;
-  length_by_distict_token: Number;
-  length_by_word: Number;
-  length_by_character: Number;
-  lexical_diversity: Number;
-  data_split_by_sentence: Array<string>;
-  data_fdist: Object;
+  // widgetLayout: Array<Array<Object>>;
+  submissionId: Number;
+  submissionTime: Number;
+  jobTime: Number;
+  lengthBySentence: Number;
+  lengthByDistictToken: Number;
+  lengthByWord: Number;
+  lengthByCharacter: Number;
+  lexicalDiversity: Number;
+  dataBySentence: Array<string>;
+  dataByFdist: Array<{
+    [key: string]: string | number
+  }>;
 }
 
 export interface ChartDataDisplay {
-  widget_layout: Array<Array<Object>>;
-  submission_id: string;
-  submission_timestamp: Number;
-  job_timestamp: Number;
-  length_by_sentence: Number;
-  length_by_distict_token: Number;
-  length_by_word: Number;
-  length_by_character: Number;
-  lexical_diversity: string;
-  data_split_by_sentence: Array<string>;
-  data_fdist: Object;
+  // widgetLayout: Array<Array<Object>>;
+  submissionId: Number;
+  submissionTime: Number;
+  jobTime: Number;
+  lengthBySentence: Number;
+  lengthByDistictToken: Number;
+  lengthByWord: Number;
+  lengthByCharacter: Number;
+  lexicalDiversity: string;
+  dataBySentence: Array<string>;
+  dataByFdist: {
+    labels: string[],
+    datasets: number[]
+  };
 }
 
 @Injectable()
 export class DocumentStatService {
   configUrl = 'assets/data/config.json';
   // dataUrl = 'assets/data/demo_doc_stat_en_v01.json'
-  dataUrl = 'assets/data/demo_doc_stat_chi_v01.json'
+  dataUrl = 'http://192.168.1.29:8091/veriguide_dashboard/stat/document/10000009'
+  // dataUrl = 'assets/data/10000009.json'
 
   constructor(private http: HttpClient) { }
 

@@ -32,28 +32,12 @@ export class DocumentStatLandingComponent {
       .subscribe(
         (data: ChartData) => this.chartData = {
           ...data,
-          lexical_diversity: parseFloat((data.lexical_diversity.valueOf() * 100).toString()).toFixed(2) + '%',
-          data_fdist: {
-            labels: Object.keys(data.data_fdist)
-              .map(o => {
-                return {
-                  "key": o,
-                  "val": data.data_fdist[o]
-                }
-              })
-              .sort((a,b) => b.val - a.val)
-              .slice(0, 10)
-              .map(o => o.key),
-            datasets: Object.keys(data.data_fdist)
-              .map(o => {
-                return {
-                  "key": o,
-                  "val": data.data_fdist[o]
-                }
-              })
-              .sort((a,b) => b.val - a.val)
-              .slice(0, 10)
-              .map(o => parseFloat(parseFloat("" + o.val * 100).toFixed(2))),
+          lexicalDiversity: parseFloat((data.lexicalDiversity.valueOf() * 100).toFixed(2)) + '%',
+          dataByFdist: {
+            labels: data.dataByFdist.slice(0, 10).map(o => o.key.toString()),
+            datasets: data.dataByFdist.slice(0, 10).map(o => {
+              return parseFloat((Number(o.val) * 100).toFixed(2))
+            })
           }
         }, // success path
         error => this.error = error // error path
