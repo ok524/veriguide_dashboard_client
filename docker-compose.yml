@@ -1,0 +1,11 @@
+version: '3.7'
+
+services:
+
+  veriguide_dashboard_client:
+    container_name: veriguide_dashboard_client
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '4201:80'
