@@ -43,7 +43,7 @@ export interface ChartDataDisplay {
 export class DocumentStatService {
   configUrl = 'assets/data/config.json';
   // dataUrl = 'assets/data/demo_doc_stat_en_v01.json'
-  dataUrl = 'http://192.168.1.29:8091/veriguide_dashboard/stat/document/10000009'
+  dataUrl = 'http://192.168.1.29:8091/veriguide_dashboard/stat/documents/10000009'
   // dataUrl = 'assets/data/10000009.json'
 
   constructor(private http: HttpClient) { }
