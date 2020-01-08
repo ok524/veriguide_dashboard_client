@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ActivatedRoute} from '@angular/router';
 import { Config, ChartData, ChartDataDisplay, DocumentStatService } from '../../../data/document-stat.service';
 
 @Component({
@@ -10,10 +11,15 @@ export class DocumentStatLandingComponent {
   error: any;
   config: Config;
   chartData: ChartDataDisplay;
+  submissionId: string;
 
-  constructor(private documentStatService: DocumentStatService) { }
+  constructor(
+    private documentStatService: DocumentStatService,
+    private route:ActivatedRoute,
+  ) { }
 
   ngOnInit() {
+    this.submissionId = this.route.snapshot.params['submissionId'];
     this.showConfig();
     this.showChartData();
   }
@@ -27,7 +33,7 @@ export class DocumentStatLandingComponent {
   }
 
   showChartData() {
-    this.documentStatService.getChartData()
+    this.documentStatService.getChartData(this.submissionId || "10000001")
       .subscribe(
         (data: ChartData) => this.chartData = {
           ...data,
