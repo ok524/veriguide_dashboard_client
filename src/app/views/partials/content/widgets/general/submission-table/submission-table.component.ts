@@ -14,7 +14,6 @@ import { SubmissionTableDataSource } from './submission-table.data-source';
 @Component({
   selector: 'kt-submission-table',
   templateUrl: './submission-table.component.html',
-  providers: [ SubmissionTableService ],
   styleUrls: ['./submission-table.component.scss']
 })
 export class SubmissionTableComponent implements OnInit {

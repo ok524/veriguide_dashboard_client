@@ -45,8 +45,11 @@ import {
   MenuHorizontalService,
   PageConfigService,
   SplashScreenService,
-  SubheaderService
+  SubheaderService,
+  SubmissionTableService,
 } from './core/_base/layout';
+// Document Stat Services
+import { DocumentStatService } from './data/document-stat.service';
 // Auth
 import { AuthModule } from './views/pages/auth/auth.module';
 import { AuthService } from './core/auth';
@@ -121,6 +124,8 @@ export function hljsLanguages(): HighlightLanguage[] {
     PageConfigService,
     KtDialogService,
     DataTableService,
+    SubmissionTableService,
+    DocumentStatService,
     SplashScreenService,
     {
       provide: PERFECT_SCROLLBAR_CONFIG,

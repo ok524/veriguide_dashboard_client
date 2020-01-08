@@ -4,7 +4,6 @@ import { Config, ChartData, ChartDataDisplay, DocumentStatService } from '../../
 @Component({
   selector: 'kt-document-stat-landing',
   templateUrl: './document-stat-landing.component.html',
-  providers: [ DocumentStatService ],
   styleUrls: ['./document-stat-landing.component.scss']
 })
 export class DocumentStatLandingComponent {
