@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 import { MatButtonModule, MatIconModule, MatPaginatorModule, MatProgressSpinnerModule, MatSortModule, MatTableModule, } from '@angular/material';
 import { CoreModule } from '../../../../core/core.module';
 import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
@@ -42,6 +43,7 @@ import { WidgetFiguresComponent } from './widget-figures/widget-figures.componen
     Widget26Component,
     Timeline2Component,
     WidgetFiguresComponent,
+    RouterModule,
   ],
   imports: [
     CommonModule,
@@ -53,6 +55,7 @@ import { WidgetFiguresComponent } from './widget-figures/widget-figures.componen
     MatProgressSpinnerModule,
     MatPaginatorModule,
     MatSortModule,
+    RouterModule,
   ]
 })
 export class WidgetModule {

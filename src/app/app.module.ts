@@ -6,6 +6,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { GestureConfig, MatProgressSpinnerModule } from '@angular/material';
 import { OverlayModule } from '@angular/cdk/overlay';
+import { RouterModule, RouterLink } from '@angular/router';
 // Angular in memory
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 // Perfect Scroll bar
@@ -113,7 +114,8 @@ export function hljsLanguages(): HighlightLanguage[] {
     TranslateModule.forRoot(),
     MatProgressSpinnerModule,
     InlineSVGModule.forRoot(),
-    ThemeModule
+    ThemeModule,
+    RouterModule,
   ],
   exports: [],
   providers: [

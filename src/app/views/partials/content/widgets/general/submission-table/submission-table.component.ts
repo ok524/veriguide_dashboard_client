@@ -2,7 +2,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { SelectionModel } from '@angular/cdk/collections';
 import { MatPaginator, MatSort } from '@angular/material';
-import { Router } from '@angular/router';
+import { RouterLink } from '@angular/router';
 // RXJS
 import { tap } from 'rxjs/operators';
 import { merge } from 'rxjs';
