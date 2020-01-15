@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
-import { Config, ChartData, ChartDataDisplay, DocumentStatService } from '../../../data/document-stat.service';
+import { Config, ChartData, ChartDataDisplay, DocumentStatService } from '../../../core/_base/layout/services/document-stat.service';
 
 @Component({
   selector: 'kt-document-stat-landing',

@@ -50,7 +50,7 @@ import {
   SubmissionTableService,
 } from './core/_base/layout';
 // Document Stat Services
-import { DocumentStatService } from './data/document-stat.service';
+import { DocumentStatService } from './core/_base/layout/services/document-stat.service';
 // Auth
 import { AuthModule } from './views/pages/auth/auth.module';
 import { AuthService } from './core/auth';
