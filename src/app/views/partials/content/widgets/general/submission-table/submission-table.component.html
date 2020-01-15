@@ -3,7 +3,7 @@
 	<!-- Checkbox Column -->
 	<!-- Table with selection -->
 	<!-- https://run.stackblitz.com/api/angular/v1?file=app%2Ftable-selection-example.ts -->
-	<table mat-table class="lmat-elevation-z8" [dataSource]="dataSource" matSort matSortActive="submissionId" matSortDirection="asc" matSortDisableClear>
+	<table mat-table class="lmat-elevation-z8" [dataSource]="dataSource" matSort matSortActive="submissionId" matSortDirection="desc" matSortDisableClear>
 		<ng-container matColumnDef="submissionId">
 			<th mat-header-cell *matHeaderCellDef mat-sort-header>Id</th>
 			<td mat-cell *matCellDef="let product" class="mat-column-vinCode">{{product.submissionId}}</td>

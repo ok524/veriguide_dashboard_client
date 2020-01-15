@@ -64,6 +64,8 @@ export class SubmissionTableComponent implements OnInit {
     // Init DataSource
     this.dataSource = new SubmissionTableDataSource(this.submissionTableService);
     // First load
+    this.sort.direction = "desc";
+    this.sort.active = "submissionId";
     this.loadItems(true);
   }
 
