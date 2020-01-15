@@ -1,3 +1,4 @@
+<!--
 <div class="row">
   <div class="col-sm-6">
     <p>submissionId</p>
@@ -6,10 +7,26 @@
       <p>submission_timestamp is "{{chartData.submissionTime}}"</p>
     </span>
   </div>
-  <div class="col-sm-6">
-    <p>{{submissionId}}</p>
+</div>
+-->
+
+<!-- begin:: Content Head -->
+<div class="kt-subheader kt-grid__item" id="kt_subheader">
+  <div class="" >
+    <div class="kt-subheader__main">
+      <h3 class="kt-subheader__title">Document Stats</h3>
+
+      <span *ngIf="submissionId" class="kt-subheader__separator kt-subheader__separator--v"></span>
+      <h4 *ngIf="submissionId" class="kt-subheader__desc">Submission ID</h4>
+      <h4 *ngIf="submissionId" class="kt-subheader__desc">#{{submissionId}}</h4>
+      <!-- <a href="javascript:;" class="btn btn-label-warning btn-bold btn-sm btn-icon-h kt-margin-l-10">
+        Add New
+      </a> -->
+
+    </div>
   </div>
 </div>
+<!-- end:: Content Head -->
 
 
 <div class="row">

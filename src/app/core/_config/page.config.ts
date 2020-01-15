@@ -6,6 +6,13 @@ export class PageConfig {
         desc: 'Latest updates and statistic charts'
       },
     },
+    'document-stat': {
+      page: {
+        title: false,
+        desc: 'Document Stats Landing Page',
+        subheader: false
+      },
+    },
     'user-management': {
       users: {
         page: {title: 'Users', desc: ''}
