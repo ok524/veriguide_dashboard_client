@@ -11,6 +11,8 @@ import { QueryParamsModel } from '../../../../../../core/_base/crud';
 // Layout
 import { SubmissionTableItemModel, SubmissionTableService } from '../../../../../../core/_base/layout';
 import { SubmissionTableDataSource } from './submission-table.data-source';
+// Moment
+import * as moment from 'moment';
 
 @Component({
   selector: 'kt-submission-table',
@@ -146,5 +148,9 @@ export class SubmissionTableComponent implements OnInit {
         return 'info';
     }
     return '';
+  }
+
+  getHumanReadableDatetime(time: any): string {
+    return moment(time).format('LLL')
   }
 }

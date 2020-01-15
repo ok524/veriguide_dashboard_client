@@ -11,12 +11,12 @@
 
     <ng-container matColumnDef="submissionTime">
 			<th mat-header-cell *matHeaderCellDef mat-sort-header>Submission Time</th>
-			<td mat-cell *matCellDef="let product" class="mat-column-vinCode">{{product.submissionTime}}</td>
+			<td mat-cell *matCellDef="let product" class="mat-column-vinCode">{{getHumanReadableDatetime(product.submissionTime)}}</td>
 		</ng-container>
 
     <ng-container matColumnDef="jobTime">
 			<th mat-header-cell *matHeaderCellDef mat-sort-header>Process Start Time</th>
-			<td mat-cell *matCellDef="let product" class="mat-column-vinCode">{{product.jobTime}}</td>
+			<td mat-cell *matCellDef="let product" class="mat-column-vinCode">{{getHumanReadableDatetime(product.jobTime)}}</td>
     </ng-container>
 
     <ng-container matColumnDef="lengthByWord">
