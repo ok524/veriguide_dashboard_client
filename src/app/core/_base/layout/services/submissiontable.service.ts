@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
 // Models
 import { SubmissionTableItemModel } from '../models/submissiontable-item.model';
 
-const API_DATATABLE_URL = 'http://192.168.1.29:8091/veriguide_dashboard/stat/users/admin';
+const API_DATATABLE_URL = 'http://192.168.1.29:8091/veriguide_dashboard/stat/users/admin/part';
 
 @Injectable()
 export class SubmissionTableService {

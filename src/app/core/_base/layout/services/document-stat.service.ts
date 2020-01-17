@@ -53,6 +53,6 @@ export class DocumentStatService {
   }
 
   getChartData(submissionId :string) {
-    return this.http.get<ChartData>(`${this.dataUrl}${submissionId}`);
+    return this.http.get<ChartData>(`${this.dataUrl}${submissionId}/full`);
   }
 }
