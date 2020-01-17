@@ -29,7 +29,7 @@ COPY . /app
 # RUN ng e2e --port 4202
 
 # generate build
-RUN ng build --output-path=dist
+RUN ng build --prod --output-path=dist
 
 ############
 ### prod ###
@@ -41,6 +41,7 @@ FROM nginx:1.16.0-alpine
 # copy artifact build from the 'build environment'
 COPY --from=build /app/dist /usr/share/nginx/html
 COPY ./nginx-custom.conf /etc/nginx/conf.d/default.conf
+COPY ./gzip.conf /etc/nginx/conf.d/gzip.conf
 
 # expose port 80
 EXPOSE 80
