@@ -12,8 +12,25 @@ export class WidgetFiguresComponent implements OnInit {
   // Public properties
   @Input() title: string;
   @Input() desc: string;
-  @Input() data: { labels: string[]; datasets: any[] };
   @ViewChild('chart', {static: true}) chart: ElementRef;
+
+  private _item; // private property _item
+  the_chart :any;
+
+  // use getter setter to define the property
+  get data(): any {
+    return this._item;
+  }
+
+  @Input()
+  set data(val: any) {
+    this._item = val;
+    if (this.the_chart) {
+      this.the_chart.data.datasets[0].data = val.datasets;
+      this.the_chart.data.labels = val.labels;
+      this.the_chart.update()
+    }
+  }
 
   constructor() {
   }
@@ -101,7 +118,9 @@ export class WidgetFiguresComponent implements OnInit {
       }
     };
 
-    const chart = new Chart(this.chart.nativeElement, config);
+    if (!this.the_chart) {
+      this.the_chart = new Chart(this.chart.nativeElement, config);
+    }
   }
 
 }

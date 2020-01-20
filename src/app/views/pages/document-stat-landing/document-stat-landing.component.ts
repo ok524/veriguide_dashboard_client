@@ -22,10 +22,11 @@ export class DocumentStatLandingComponent {
     this.submissionId = this.route.snapshot.params['submissionId'];
     this.route.params.subscribe( params => {
       this.submissionId = params['submissionId'];
-      this.showChartData(this.submissionId);
+      this.showConfig();
+      this.showChartData();
     });
     this.showConfig();
-    this.showChartData(this.submissionId);
+    this.showChartData();
   }
 
   showConfig() {
@@ -36,8 +37,8 @@ export class DocumentStatLandingComponent {
       );
   }
 
-  showChartData(submissionId :string) {
-    this.documentStatService.getChartData(submissionId || "10000001")
+  showChartData() {
+    this.documentStatService.getChartData(this.submissionId || "10000001")
       .subscribe(
         (data: ChartData) => this.chartData = {
           ...data,

@@ -28,6 +28,10 @@ const routes: Routes = [
         loadChildren: () => import('app/views/pages/document-stat-landing/document-stat-landing.module').then(m => m.DocumentStatLandingModule)
       },
       {
+        path: 'document-trend',
+        loadChildren: () => import('app/views/pages/document-stat-trend/document-stat-trend.module').then(m => m.DocumentStatTrendModule)
+      },
+      {
         path: 'mail',
         loadChildren: () => import('app/views/pages/apps/mail/mail.module').then(m => m.MailModule)
       },

@@ -17,6 +17,13 @@ export class MenuConfig {
           page: '/document-stat',
           translate: 'MENU.DOCUMENT_STAT',
         },
+        {
+          title: 'Document Trend',
+          root: true,
+          alignment: 'left',
+          page: '/document-trend',
+          translate: 'MENU.DOCUMENT_TREND',
+        },
       ]
     },
     aside: {
