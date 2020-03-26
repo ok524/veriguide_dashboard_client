@@ -13,6 +13,7 @@ export { StickyDirective } from './directives/sticky.directive';
 // Models
 export { DataTableItemModel } from './models/datatable-item.model';
 export { SubmissionTableItemModel } from './models/submissiontable-item.model';
+export { UserTableItemModel } from './models/usertable-item.model';
 export { ExternalCodeExample } from './models/external-code-example';
 export { OffcanvasOptions } from './directives/offcanvas.directive';
 export { ScrollTopOptions } from './directives/scroll-top.directive';
@@ -31,6 +32,7 @@ export { TimeElapsedPipe } from './pipes/time-elapsed.pipe';
 // Services
 export { DataTableService } from './services/datatable.service';
 export { SubmissionTableService } from './services/submissiontable.service';
+export { UserTableService } from './services/usertable.service';
 export { TranslationService } from './services/translation.service';
 
 export { LayoutConfigService } from './services/layout-config.service';

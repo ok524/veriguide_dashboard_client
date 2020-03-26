@@ -24,6 +24,13 @@ export class MenuConfig {
           page: '/document-trend',
           translate: 'MENU.DOCUMENT_TREND',
         },
+        {
+          title: 'Document Fyp',
+          root: true,
+          alignment: 'left',
+          page: '/document-fyp',
+          translate: 'MENU.DOCUMENT_FYP',
+        },
       ]
     },
     aside: {
@@ -43,6 +50,14 @@ export class MenuConfig {
           icon: 'flaticon2-architecture-and-city',
           page: '/document-stat',
           translate: 'MENU.DOCUMENT_STAT',
+          bullet: 'dot',
+        },
+        {
+          title: 'Document Fyp',
+          root: true,
+          icon: 'flaticon2-architecture-and-city',
+          page: '/document-fyp',
+          translate: 'MENU.DOCUMENT_FYP',
           bullet: 'dot',
         },
         {

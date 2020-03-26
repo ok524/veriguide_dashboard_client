@@ -14,7 +14,8 @@ export const locale = {
       APPS: 'Apps',
       DASHBOARD: 'Dashboard',
       DOCUMENT_STAT: 'Document Stat',
-      DOCUMENT_TREND: 'DOCUMENT_TREND',
+      DOCUMENT_TREND: 'Trend',
+      DOCUMENT_FYP: 'FYP Stat',
     },
     AUTH: {
       GENERAL: {

@@ -32,6 +32,14 @@ const routes: Routes = [
         loadChildren: () => import('app/views/pages/document-stat-trend/document-stat-trend.module').then(m => m.DocumentStatTrendModule)
       },
       {
+        path: 'document-fyp',
+        loadChildren: () => import('app/views/pages/document-stat-fyp/document-stat-fyp.module').then(m => m.DocumentStatFypModule)
+      },
+      {
+        path: 'document-fyp/:uuid',
+        loadChildren: () => import('app/views/pages/document-stat-fyp/document-stat-fyp.module').then(m => m.DocumentStatFypModule)
+      },
+      {
         path: 'mail',
         loadChildren: () => import('app/views/pages/apps/mail/mail.module').then(m => m.MailModule)
       },

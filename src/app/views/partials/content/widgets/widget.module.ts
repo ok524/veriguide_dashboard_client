@@ -7,6 +7,7 @@ import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 // Datatable
 import { DataTableComponent } from './general/data-table/data-table.component';
 import { SubmissionTableComponent } from './general/submission-table/submission-table.component';
+import { UserTableComponent } from './general/user-table/user-table.component';
 // General widgets
 import { Widget1Component } from './widget1/widget1.component';
 import { Widget4Component } from './widget4/widget4.component';
@@ -21,6 +22,7 @@ import { WidgetFiguresComponent } from './widget-figures/widget-figures.componen
   declarations: [
     DataTableComponent,
     SubmissionTableComponent,
+    UserTableComponent,
     // Widgets
     Widget1Component,
     Widget4Component,
@@ -34,6 +36,7 @@ import { WidgetFiguresComponent } from './widget-figures/widget-figures.componen
   exports: [
     DataTableComponent,
     SubmissionTableComponent,
+    UserTableComponent,
     // Widgets
     Widget1Component,
     Widget4Component,

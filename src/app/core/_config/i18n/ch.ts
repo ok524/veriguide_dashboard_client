@@ -14,7 +14,8 @@ export const locale = {
       APPS: '应用',
       DASHBOARD: '仪表板',
       DOCUMENT_STAT: 'Document Stat',
-      DOCUMENT_TREND: 'DOCUMENT_TREND',
+      DOCUMENT_TREND: 'Trend',
+      DOCUMENT_FYP: 'FYP Stat',
     },
     AUTH: {
       GENERAL: {

@@ -1,0 +1,72 @@
+<!-- See off.documentations 'https://material.angular.io/components/table/overview' -->
+<div perfectScrollbar [ngStyle]="{'max-height': '43vh', 'position': 'relative'}" class="mat-table__wrapper mat-table__wrapper--dashboard mb-4">
+  <!-- Checkbox Column -->
+  <!-- Table with selection -->
+  <!-- https://run.stackblitz.com/api/angular/v1?file=app%2Ftable-selection-example.ts -->
+  <table mat-table class="lmat-elevation-z8" [dataSource]="dataSource" matSort matSortActive="submissionId" matSortDirection="desc" matSortDisableClear>
+    <ng-container matColumnDef="submissionId">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Id</th>
+      <td mat-cell *matCellDef="let product" class="mat-column-vinCode">
+        <a [routerLink]="['/document-stat/', product.submissionId]" mat-icon-button color="primary" matTooltip="View item">
+          {{product.submissionId}}
+        </a>
+      </td>
+  </ng-container>
+
+  <ng-container matColumnDef="created">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>Submission Time</th>
+    <td mat-cell *matCellDef="let product" class="mat-column-vinCode">{{getHumanReadableDatetime(product.created)}}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header class="d-none d-lg-table-cell">ID</th>
+    <td mat-cell *matCellDef="let product" class="mat-column-vinCode" class="d-none d-lg-table-cell">{{product.id}}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="submission_id">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header class="d-none d-lg-table-cell">Submission ID</th>
+    <td mat-cell *matCellDef="let product" class="mat-column-vinCode" class="d-none d-lg-table-cell">{{product.submission_id}}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="uuid">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header class="d-none d-lg-table-cell">UUID</th>
+    <td mat-cell *matCellDef="let product" class="mat-column-vinCode" class="d-none d-lg-table-cell">
+      <a [routerLink]="['/document-fyp/', product.uuid]" mat-icon-button color="primary" matTooltip="View item">
+        {{trimUUID(product.uuid)}}
+      </a>
+    </td>
+  </ng-container>
+
+  <ng-container matColumnDef="process_status">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header class="d-none d-lg-table-cell">Status</th>
+    <td mat-cell *matCellDef="let product" class="mat-column-vinCode" class="d-none d-lg-table-cell">{{product.process_status}}</td>
+  </ng-container>
+
+  <!-- <ng-container matColumnDef="user_id">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>User ID</th>
+    <td mat-cell *matCellDef="let product" class="mat-column-vinCode">{{product.user_id}}</td>
+  </ng-container> -->
+
+    <!-- <ng-container matColumnDef="actions">
+      <th mat-header-cell *matHeaderCellDef width="106px" class="kt-pl-13">
+        Actions
+      </th>
+      <td mat-cell *matCellDef="let product">
+        <a [routerLink]="['/document-stat/', product.submissionId]" mat-icon-button color="primary" matTooltip="View item">
+          <mat-icon>remove_red_eye</mat-icon>
+        </a>
+      </td>
+    </ng-container> -->
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
+
+  <div class="mat-table__message" *ngIf="!dataSource.hasItems">No records found</div>
+</div>
+<!-- start: BOTTOM -->
+<div class="mat-table__bottom mat-table__bottom--padding">
+  <mat-spinner [diameter]="20" *ngIf="dataSource.loading$ | async"></mat-spinner>
+  <mat-paginator [pageSize]="6" [pageSizeOptions]="[3, 6, 15]" [length]="dataSource.paginatorTotal$ | async" [showFirstLastButtons]="true"></mat-paginator>
+</div>
+<!-- end: BOTTOM -->

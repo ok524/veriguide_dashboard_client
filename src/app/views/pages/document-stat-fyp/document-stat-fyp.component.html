@@ -1,0 +1,66 @@
+<!-- begin:: Content Head -->
+<div class="kt-subheader kt-grid__item" id="kt_subheader">
+  <div class="" >
+    <div class="kt-subheader__main">
+      <h3 class="kt-subheader__title">Document FYP</h3>
+
+      <span *ngIf="uuid" class="kt-subheader__separator kt-subheader__separator--v"></span>
+      <h4 *ngIf="uuid" class="kt-subheader__desc">UUID</h4>
+      <h4 *ngIf="uuid" class="kt-subheader__desc">#{{uuid}}</h4>
+      <!-- <a href="javascript:;" class="btn btn-label-warning btn-bold btn-sm btn-icon-h kt-margin-l-10">
+        Add New
+      </a> -->
+
+    </div>
+  </div>
+</div>
+<!-- end:: Content Head -->
+
+<!-- Widgets -->
+<div *ngFor='let row of docDataResult' class="row">
+  <div *ngFor='let item of row | keyvalue' class="col-sm-4">
+    <kt-portlet [class]="'Xkt-portlet--height-fluid-half kt-portlet--border-bottom-brand'">
+      <kt-portlet-body [class]="'kt-portlet__body--fluid'">
+        <kt-widget26 *ngIf="true" [value]="item.value" [desc]="item.key" [options]="{}"></kt-widget26>
+      </kt-portlet-body>
+    </kt-portlet>
+  </div>
+</div>
+
+<!-- Upload file form-->
+<div class="row">
+  <div class="col-sm-8">
+    <form class="kt-form" [formGroup]="uploadForm" (ngSubmit)="onSubmit()">
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Submission ID" formControlName="submission_id" />
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="User ID" formControlName="user_id" />
+      </mat-form-field>
+
+      <input placeholder="File" type="file" formControlName="file" (change)="onFileChange($event)" />
+      <hr>
+
+      <mat-form-field>
+        <textarea matInput placeholder="Autosize textarea" matTextareaAutosize matAutosizeMinRows="2"
+          matAutosizeMaxRows="5"></textarea>
+      </mat-form-field>
+
+      <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+  </div>
+</div>
+
+<!-- User data table-->
+<div class="row">
+  <div class="col-sm-12">
+    <kt-portlet [class]="'kt-portlet--height-fluid'">
+      <kt-portlet-header [title]="'User Table'" [class]="'kt-portlet__head--lg kt-portlet__head--noborder kt-portlet__head--break-sm'">
+      </kt-portlet-header>
+      <kt-portlet-body [class]="'kt-portlet__body--fit'">
+        <kt-user-table></kt-user-table>
+      </kt-portlet-body>
+    </kt-portlet>
+  </div>
+</div>

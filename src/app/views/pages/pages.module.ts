@@ -12,6 +12,7 @@ import { ECommerceModule } from './apps/e-commerce/e-commerce.module';
 import { UserManagementModule } from './user-management/user-management.module';
 import { DocumentStatLandingModule } from './document-stat-landing/document-stat-landing.module';
 import { DocumentStatTrendModule } from './document-stat-trend/document-stat-trend.module';
+import { DocumentStatFypModule } from './document-stat-fyp/document-stat-fyp.module';
 
 @NgModule({
   declarations: [],
@@ -27,6 +28,7 @@ import { DocumentStatTrendModule } from './document-stat-trend/document-stat-tre
     UserManagementModule,
     DocumentStatLandingModule,
     DocumentStatTrendModule,
+    DocumentStatFypModule,
   ],
   providers: []
 })
