@@ -7,9 +7,9 @@
 <ng-template #itemTemplate let-item="item">
 	<div class="kt-widget1__item">
 		<div class="kt-widget1__info">
-			<h3 class="kt-widget1__title">{{item.title}}</h3>
-			<span class="kt-widget1__desc">{{item.desc}}</span>
+			<h1 class="kt-widget1__title">{{item.title}}</h1>
+			<h2><span class="kt-widget1__desc" style="fontSize: 18px;">{{item.desc}}</span></h2>
 		</div>
-		<span class="kt-widget1__number" [ngClass]="item.valueClass">{{item.value}}</span>
+		<h2><span class="kt-widget1__number" style="fontSize: 18px;" [ngClass]="item.valueClass"><b>{{item.value}}</b></span></h2>
 	</div>
 </ng-template>

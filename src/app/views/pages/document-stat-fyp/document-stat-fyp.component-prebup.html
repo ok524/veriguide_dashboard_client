@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<title>KeepUp</title>
+		<meta charset="UTF-8"name="viewport" content="width=device-width,initial-scale=1">
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="keepup.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		<link rel="stylesheet" href="keepup.css">
+	<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+	</head>
+
+	<body style="font-family:'Source Sans Pro'">
+		<header>
+			<nav class="navbar navbar-expand-md bg-white navbar-light pt-0 pb-1">
+				<div class="dropdown">
+					<a class="navbar-brand nav-link dropdown" href="#keepup.html" role="button" id="keepdropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img class="img-responsive" src="logored.png" alt="KeepUp" width="130px"></a>
+					<div class="dropdown-menu text-left" aria-labelledby="keepdropdown" >
+						<a class="dropdown-item" href="https://keep.edu.hk/"><img class="img-responsive" src="keep.png" alt="Keep" width="95px" height="31px"></a>
+						<a class="dropdown-item" href="https://course.keep.edu.hk/">&nbsp<img class="img-responsive" src="keepcourse.png" alt="KeepCourse" width="155px"></a>
+						<a class="dropdown-item" href="https://search.keep.edu.hk/">&nbsp<img class="img-responsive" src="keepsearch.png" alt="KeepSearch" width="154px"></a>
+						<a class="dropdown-item" href="https://poll.keep.edu.hk/">&nbsp<img class="img-responsive" src="keepoll.png" alt="Keepoll" width="116px"></a>
+						<a class="dropdown-item" href="https://catalog.keep.edu.hk/"><img class="img-responsive" src="keepcatalog.png" alt="KeepCatalog" width="164px" height="25px"></a>
+						<a class="dropdown-item" href="#keepup.html">&nbsp<img class="img-responsive" src="keepupblack.png" alt="KeepUp" width="116px" height="29px"></a>
+					</div>
+				</div>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div  id="navbar" class="collapse navbar-collapse justify-content-end">
+					<div class="navbar-nav">
+						<a class="nav-item nav-link mr-2" href="https://account.keep.edu.hk/idp/module.php/core/loginuserpass.php?AuthState=_ca29c84d2439111bca46fc77e2b305ec7c16249aaf%3Ahttps%3A%2F%2Faccount.keep.edu.hk%2Fidp%2Fsaml2%2Fidp%2FSSOService.php%3Fspentityid%3Dhttps%253A%252F%252Fpoll.keep.edu.hk%252Fsaml%252Fmetadata%26cookieTime%3D1582384316"><b>Login</b></a>
+						<a class="nav-item nav-link" href="https://account.keep.edu.hk/account/signup"><b>Sign Up</b></a>
+					</div>
+				</div>
+			</nav>
+		</header>
+	
+		<section>
+			<div class="container-fluid mb-sm-5" style="background-color: whitesmoke">
+				<div class="row ml-sm-3 mr-sm-3 mb-sm-2">
+					<div class="col-12 justify-content-center text-center mt-4">
+						<img class="img-fluid mb-3" src="../../../../assets-vg/images/keepupblack.png" alt="KeepUp" width="205px">
+						<h3 class="mb-4">Receive Immediate Essay Feedback</h3>
+					</div>
+				</div>
+				<div class="row mt-2 ml-sm-3 mr-sm-3 mb-sm-3">
+					<div class="col-md-4 justify-content-center text-center pt-2">
+						<!--<figure class="figure">-->
+							<img class="figure-img img-fluid pb-1" src="../../../../assets-vg/images/upload.png" alt="Upload Essay" width="200px">
+							<h3 class="figure-caption text-dark text-center pt-2">Step 1. Upload essay</h3>
+							<!--</figure>-->
+					</div>
+					<div class="col-md-4 justify-content-center text-center">
+						<!--<figure class="figure">-->
+							<img class="figure-img img-fluid pb-3" src="../../../../assets-vg/images/processing.png" alt="Wait for Evaluation" width="182px">
+							<h3 class="figure-caption text-dark text-center pt-2">Step 2. Wait while we evaluate</h3>
+							<!--</figure>-->
+					</div>
+					<div class="col-md-4 justify-content-center text-center pt-2">
+						<!--<figure class="figure">-->
+							<img class="figure-img img-fluid pb-0" src="../../../../assets-vg/images/download.png" alt="Download Score Report" width="153px">
+							<h3 class="figure-caption text-dark text-center pt-0"><br>Step 3. Download score report</h3>
+							<!--</figure>-->
+					</div>
+				</div>
+				<!--
+				<div class="row ml-sm-5 mr-sm-5 mt-sm-4 justify-content-center">
+					<h5><b>Start My Evaluation Now:</b></h5>
+				</div>
+
+				<div class="row ml-sm-5 mr-sm-5 mt-sm-4 justify-content-center text-center">
+					<form id="check" name="user">
+						<label for="username" style="font-size: 120%">User ID:</label>
+						<input type="text" id="uuid" name="username" required style="width:40%; height:40%; box-sizing: border-box; padding-right: 2%">
+						<button id="check" onclick="checkuser()" class="btn btn-outline-info btn-sm" type="button">Submit</button>
+						<p id="validtext" style="color:red; font-size:80%"></p>
+					</form>
+				-->
+					<!--
+					<div class="col-3 text-center">
+						<button onclick="showcontent()" type="button" class="btn btn-lg btn-outline-info mb-5"><b>I'm a Student</b></button>
+					</div>
+					<div class="col-3 text-center">
+						<button onclick= "showinstructor()" type="button" class="btn btn-lg btn-outline-info mb-5"><b>I'm an Instructor</b></button>
+					</div>
+				--><!--
+				</div>
+				-->
+			</div>
+		</section>
+
+
+
+
+
+<!--
+<p>{{factlist.length}}</p>
+<kt-document-stat-fyp-list [listvalue]="factlist" (listvalueChange)="this.factlist= $event"></kt-document-stat-fyp-list>
+
+-->
+
+<!-- WidgetRadar -->
+<kt-portlet>
+  <kt-portlet-body [class]="'kt-portlet__body--fit'">
+    <div class="row row-no-padding row-col-separator-xl">
+	    <div class="col-sm-4">
+		    <div class="row row-full-he"
+		    <kt-portlet [class]="'kt-portlet--height-fluid-half kt-portlet--border-bottom-brand'">
+			    <kt-portlet-body [class]="'kt-portlet__body--fluid'">
+				    <kt-widget26 [value]="95" [title]="'Overall Score'"></kt-widget26>
+			    </kt-portlet-body>
+	            </kt-portlet>
+	    </div>
+	<div class="col-sm-8">
+        <kt-widgetRadar [title]="'Overall Performance'" [data]="radarChartData"></kt-widgetRadar>
+      </div>
+    </div>
+     <div class="row row-no-padding row-col-separator-xl">
+         <!--<div class="col-sm-2">
+	 </div>-->
+        <div class="col-sm-12">
+      <kt-widget1 [title]="'Cross-Fact-Checking Results'" [data]="factData"></kt-widget1>
+        </div>
+        <!--      <div class="col-sm-2">
+	      </div>-->
+ </div>
+  </kt-portlet-body>
+</kt-portlet>
+ <!--<div class="row row-no-padding row-col-separator-xl">
+	 <div class="col-sm-2">
+	</div>
+	<div class="col-sm-8">
+      <kt-widget1></kt-widget1>
+	</div>
+	      <div class="col-sm-2">
+      </div>
+ </div>
+
+ -->
+<!-- Widgets -->
+<div *ngFor='let row of docDataResult' class="row">
+  <div *ngFor='let item of row | keyvalue' class="col-sm-4">
+    <kt-portlet [class]="'Xkt-portlet--height-fluid-half kt-portlet--border-bottom-brand'">
+      <kt-portlet-body [class]="'kt-portlet__body--fluid'">
+

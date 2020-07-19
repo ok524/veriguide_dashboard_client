@@ -1,0 +1,16 @@
+<div class="kt-widget15">
+	<ng-container *ngFor="let item of data">
+		<ng-container [ngTemplateOutlet]="itemTemplate" [ngTemplateOutletContext]="{item: item}"></ng-container>
+	</ng-container>
+</div>
+
+<ng-template #itemTemplate let-item="item">
+	<div class="kt-widget15__item ml-1 mr-1">
+		<span class="kt-widget15__stats">{{item.stats}}</span>
+		<span class="kt-widget15__text">{{item.text}}</span>
+		<div class="kt-space-10"></div>
+		<div class="progress kt-widget15__chart-progress--sm">
+			<div class="progress-bar bg-warning" id = "{{item.id}}" role="progressbar" [style.width]="item.stats" aria-valuenow=item.value aria-valuemin="0" aria-valuemax="100"></div>
+		</div>
+	</div>
+</ng-template>

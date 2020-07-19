@@ -1,0 +1,94 @@
+* { margin: 0; padding: 0; }
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; 
+ }
+
+ .figure{
+ 	color:black;
+ }
+
+ .btn-outline-danger{
+ 	color: white;
+ 	background-color: rgba(255, 0, 0, 0.4);
+ 	border-color: rgba(255, 0, 0, 0.4);
+ }
+
+ .btn-outline-danger:hover, .btn-outline-danger:focus, .btn-outline-danger:active, .btn-outline-danger.active{
+ 	color:white;
+ 	background-color: rgba(255, 0, 0, 0.5);
+ 	border-color: rgba(255, 0, 0, 0.5);
+ 	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.btn-outline-danger2{
+ 	color: black;
+ 	background-color: white;
+ 	font-weight: bold;
+ 	border: 3px solid rgba(255, 0, 0, 0.5);
+ }
+
+ .btn-outline-danger2:hover, .btn-outline-danger2:focus, .btn-outline-danger2:active, .btn-outline-danger2.active{
+ 	color:white;
+ 	background-color: rgba(255, 0, 0, 0.7);
+ 	border-color: rgba(255, 0, 0, 0.7);
+ 	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+ 	font-weight: bold;
+}
+
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+    color: #FFFFFF;
+}
+
+.navbar-light .navbar-nav .nav-link{
+    color: black;
+}
+
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+    color: rgba(255, 0, 0, 0.6)!important;
+    transition:0.3s;
+}
+
+.nav-pills .nav-item .nav-link {
+  background-color: white;
+  color: black;
+}
+
+.nav-pills .nav-item .nav-link.active {
+  background-color: rgba(255, 0, 0, 0.5);
+  color:white;
+  border-color: rgba(255, 0, 0, 0.6);
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 10px 0 rgba(0,0,0,0.19);
+  font-weight:bold;
+  font-size:large;
+}
+
+.tab-content {
+  border-top: transparent;
+  padding: 15px;
+}
+
+.tab-content .tab-pane {
+  background-color: transparent;
+  color: black;
+  min-height: 200px;
+  height: auto;
+}
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.hidden {
+     display:none;
+}
+
+
+

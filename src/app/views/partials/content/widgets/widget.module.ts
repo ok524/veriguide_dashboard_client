@@ -13,8 +13,12 @@ import { Widget1Component } from './widget1/widget1.component';
 import { Widget4Component } from './widget4/widget4.component';
 import { Widget5Component } from './widget5/widget5.component';
 import { Widget12Component } from './widget12/widget12.component';
+import { Widget15Component } from './widget15/widget15.component';
 import { Widget14Component } from './widget14/widget14.component';
 import { Widget26Component } from './widget26/widget26.component';
+import { WidgetRadarComponent } from './widgetRadar/widgetRadar.component';
+import { WidgetDonutComponent } from './widgetDonut/widgetDonut.component';
+import { WidgetDonut2Component } from './widgetDonut2/widgetDonut2.component';
 import { Timeline2Component } from './timeline2/timeline2.component';
 import { WidgetFiguresComponent } from './widget-figures/widget-figures.component';
 
@@ -28,8 +32,12 @@ import { WidgetFiguresComponent } from './widget-figures/widget-figures.componen
     Widget4Component,
     Widget5Component,
     Widget12Component,
+    Widget15Component,
     Widget14Component,
     Widget26Component,
+    WidgetRadarComponent,
+    WidgetDonutComponent,
+    WidgetDonut2Component,
     Timeline2Component,
     WidgetFiguresComponent,
   ],
@@ -42,8 +50,12 @@ import { WidgetFiguresComponent } from './widget-figures/widget-figures.componen
     Widget4Component,
     Widget5Component,
     Widget12Component,
+    Widget15Component,
     Widget14Component,
     Widget26Component,
+    WidgetRadarComponent,
+    WidgetDonutComponent,
+    WidgetDonut2Component,
     Timeline2Component,
     WidgetFiguresComponent,
     RouterModule,

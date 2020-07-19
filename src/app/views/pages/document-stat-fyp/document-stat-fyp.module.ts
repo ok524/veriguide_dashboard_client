@@ -6,13 +6,14 @@ import { CommonModule } from '@angular/common';
 import { CoreModule } from '../../../core/core.module';
 import { PartialsModule } from '../../partials/partials.module';
 import { DocumentStatFypComponent } from './document-stat-fyp.component';
+import { DocumentStatFypComponentList } from './document-stat-fyp-list.component';
 
 import { MatIconRegistry } from '@angular/material/icon';
 import { MatInputModule, MatFormFieldModule, MatIconModule} from '@angular/material';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [DocumentStatFypComponent],
+  declarations: [DocumentStatFypComponent, DocumentStatFypComponentList],
   imports: [
     CommonModule,
     PartialsModule,

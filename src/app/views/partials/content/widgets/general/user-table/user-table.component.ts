@@ -1,5 +1,5 @@
 // Angular
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, Input, OnChanges, SimpleChange } from '@angular/core';
 import { SelectionModel } from '@angular/cdk/collections';
 import { MatPaginator, MatSort } from '@angular/material';
 import { RouterLink } from '@angular/router';
@@ -30,6 +30,7 @@ export class UserTableComponent implements OnInit {
     'process_status',
     'created',
   ];
+  @Input() lastupdate: number;
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
   @ViewChild(MatSort, {static: true}) sort: MatSort;
   selection = new SelectionModel<UserTableItemModel>(true, []);
@@ -72,6 +73,20 @@ export class UserTableComponent implements OnInit {
     this.loadItems(true);
   }
 
+  ngOnChanges(changes: {[propKey: string]: SimpleChange}) {
+    for (let propName in changes) {
+      let changedProp = changes[propName];
+      let to = JSON.stringify(changedProp.currentValue);
+      if (changedProp.isFirstChange()) {
+        console.log(`[User-table-component]: Initial value of ${propName} set to ${to}`);
+      } else {
+        let from = JSON.stringify(changedProp.previousValue);
+        console.log(`[User-table-component]: ${propName} changed from ${from} to ${to}`);
+      }
+      this.loadItems(false);
+    }
+  }
+
   /**
    * Load items
    *
@@ -85,6 +100,9 @@ export class UserTableComponent implements OnInit {
       this.paginator.pageIndex,
       firstLoad ? 6 : this.paginator.pageSize
     );
+    if (!this.dataSource) {
+      this.dataSource = new UserTableDataSource(this.UserTableService);
+    }
     this.dataSource.loadItems(queryParams);
     this.selection.clear();
   }

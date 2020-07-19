@@ -1,3 +1,237 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<title>KeepUp</title>
+		<meta charset="UTF-8"name="viewport" content="width=device-width,initial-scale=1">
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="keepup.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		<link rel="stylesheet" href="keepup.css">
+	<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+	</head>
+
+	<body style="font-family:'Source Sans Pro'">
+	-	<!--<header>
+			<nav class="navbar navbar-expand-md bg-white navbar-light">
+				<div class="dropdown">
+					<a class="navbar-brand nav-link dropdown" href="#keepup.html" role="button" id="keepdropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img class="img-responsive" src="../../../../assets-vg/images/logored.png" alt="KeepUp" width="130px"></a>
+					<div class="dropdown-menu text-left" aria-labelledby="keepdropdown" >
+						<a class="dropdown-item" href="https://keep.edu.hk/"><img class="img-responsive" src="../../../../assets-vg/images/keep.png" alt="Keep" width="95px" height="31px"></a>
+						<a class="dropdown-item" href="https://course.keep.edu.hk/"><img class="img-responsive" src="../../../../assets-vg/images/keepcourse.png" alt="KeepCourse" width="155px"></a>
+						<a class="dropdown-item" href="https://search.keep.edu.hk/"><img class="img-responsive" src="../../../../assets-vg/images/keepsearch.png" alt="KeepSearch" width="154px"></a>
+						<a class="dropdown-item" href="https://poll.keep.edu.hk/"><img class="img-responsive" src="../../../../assets-vg/images/keepoll.png" alt="Keepoll" width="116px"></a>
+						<a class="dropdown-item" href="https://catalog.keep.edu.hk/"><img class="img-responsive" src="../../../../assets-vg/images/keepcatalog.png" alt="KeepCatalog" width="164px" height="25px"></a>
+						<a class="dropdown-item" href="#keepup.html"><img class="img-responsive" src="../../../../assets-vg/images/keepupblack.png" alt="KeepUp" width="116px" height="29px"></a>
+					</div>
+				</div>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div  id="navbar" class="collapse navbar-collapse justify-content-end">
+					<div class="navbar-nav">
+						<a class="nav-item nav-link mr-2" href="https://account.keep.edu.hk/idp/module.php/core/loginuserpass.php?AuthState=_ca29c84d2439111bca46fc77e2b305ec7c16249aaf%3Ahttps%3A%2F%2Faccount.keep.edu.hk%2Fidp%2Fsaml2%2Fidp%2FSSOService.php%3Fspentityid%3Dhttps%253A%252F%252Fpoll.keep.edu.hk%252Fsaml%252Fmetadata%26cookieTime%3D1582384316"><b>Login</b></a>
+						<a class="nav-item nav-link" href="https://account.keep.edu.hk/account/signup"><b>Sign Up</b></a>
+					</div>
+				</div>
+			</nav>
+		</header>
+	-->
+	<div id="others">	
+	<section>
+			<div class="container-fluid mb-sm-5" style="background-color: whitesmoke">
+				<div class="row ml-sm-3 mr-sm-3 mb-sm-2">
+					<div class="col-12 justify-content-center text-center mt-4">
+						<img class="img-fluid mb-3" src="../../../../assets-vg/images/keepupblack.png" alt="KeepUp" width="205px">
+						<h2 class="mb-4">Receive Immediate Essay Feedback</h2>
+					</div>
+				</div>
+				<div class="row mt-2 ml-sm-3 mr-sm-3 mb-sm-3">
+					<div class="col-md-4 justify-content-center text-center pt-2">
+						<!--<figure class="figure">-->
+							<img class="figure-img img-fluid pb-1" src="../../../../assets-vg/images/upload.png" alt="Upload Essay" width="200px">
+							<h3 class="figure-caption text-dark text-center pt-2">Step 1. Upload essay</h3>
+							<!--</figure>-->
+					</div>
+					<div class="col-md-4 justify-content-center text-center">
+						<!--<figure class="figure">-->
+							<img class="figure-img img-fluid pb-3" src="../../../../assets-vg/images/processing.png" alt="Wait for Evaluation" width="182px">
+							<h3 class="figure-caption text-dark text-center pt-2">Step 2. Wait while we evaluate</h3>
+							<!--</figure>-->
+					</div>
+					<div class="col-md-4 justify-content-center text-center pt-2">
+						<!--<figure class="figure">-->
+							<img class="figure-img img-fluid pb-0" src="../../../../assets-vg/images/download.png" alt="Download Score Report" width="153px">
+							<h3 class="figure-caption text-dark text-center pt-0"><br>Step 3. Download score report</h3>
+							<!--</figure>-->
+					</div>		
+				</div>
+				<!--
+				<div class="row ml-sm-5 mr-sm-5 mt-sm-4 justify-content-center">
+					<h5><b>Start My Evaluation Now:</b></h5>
+				</div>
+				
+				<div class="row ml-sm-5 mr-sm-5 mt-sm-4 justify-content-center text-center">
+					<form id="check" name="user">
+						<label for="username" style="font-size: 120%">User ID:</label>
+						<input type="text" id="uuid" name="username" required style="width:40%; height:40%; box-sizing: border-box; padding-right: 2%">
+						<button id="check" onclick="checkuser()" class="btn btn-outline-info btn-sm" type="button">Submit</button>
+						<p id="validtext" style="color:red; font-size:80%"></p>
+					</form>	
+				-->
+					<!--
+					<div class="col-3 text-center">
+						<button onclick="showcontent()" type="button" class="btn btn-lg btn-outline-info mb-5"><b>I'm a Student</b></button>
+					</div>
+					<div class="col-3 text-center">
+						<button onclick= "showinstructor()" type="button" class="btn btn-lg btn-outline-info mb-5"><b>I'm an Instructor</b></button>
+					</div>
+				--><!--
+				</div>
+				-->
+			</div>
+		</section>
+
+		<section>
+<!-- User data table-->
+<div class="row">
+  <div class="col-sm-12">
+    <kt-portlet [class]="'kt-portlet--height-fluid'">
+      <kt-portlet-header [title]="'User Table'" [class]="'kt-portlet__head--lg kt-portlet__head--noborder kt-portlet__head--break-sm'">
+      </kt-portlet-header>
+      <kt-portlet-body [class]="'kt-portlet__body--fit'">
+        <kt-user-table></kt-user-table>
+      </kt-portlet-body>
+    </kt-portlet>
+  </div>
+</div>
+		</section>
+<!--
+		<section>
+			<div id="myContent" class="container-fluid hidden" style="background-color: whitesmoke; display: none">
+				<div class="row ml-sm-5 mr-sm-5 text-center">
+					<form  id="form" class="mt-4" style="width:100%; box-sizing: border-box" action="keepup.php" method="post" enctype="multipart/form-data">
+						<h5>Enter Prompt or Research Question below:</h5>
+						<input style="width:80%; box-sizing: border-box" type="text" name="prompt" placeholder="Explore three literary devices used in Shakespeare's Othello."><br><br>
+						<h5>Upload essay(s) below as a single or multiple file(s):</h5>
+						<p><small>To select multiple files, click "Choose Files", and hold down Shift while selecting files to upload.<br>Supported file types: .txt, .doc, .pdf</small></p>
+						<div>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+							<input class="text-center" type="file" id="fileselect" name="fileselect" multiple><br><br><br>
+						</div>
+						<input id="btnSubmit" class="mb-5 mt-0 btn btn-info btn-lg" type="submit" value="Get My Score Report" accept=".pdf,.txt,.doc">
+						<div id="loading" style="display: none">
+							<p>Processing Essay....<br>Please do not refresh page<br><img src="loader2.gif"/></p>
+						</div>
+					</form>
+				</div>
+			</div>
+		</section>
+
+-->
+		<section>
+			<div id="instructor" class="container-fluid" style="background-color: whitesmoke">
+				<div class="row ml-sm-5 mr-sm-5 text-center">
+					<form  id="form" class="kt-form mt-4" style="width:100%; box-sizing: border-box" [formGroup]="uploadForm" (ngSubmit)="onSubmit()">
+	       					<h5 style="font-size: 120%"><b>Start My Evaluation Now:</b></h5> <br>
+	      					 <p>Enter User ID below:</p>
+						 
+						 	<input matInput type="text" id="uuid" formControlName="user_id" style="width:15%; box-sizing: border-box">					
+					 	
+						<br><br>
+						<h5>Enter Prompt or Research Question below:</h5>
+					
+							<input matInput style="width:85%; box-sizing: border-box" type="text" formControlName="prompt" placeholder="Explore three literary devices used in Shakespeare's Othello."><br><br>
+						
+						<h5>Enter any facts or statements that should be included in this essay.</h5>
+					<!--	<p>Facts should be separated by new lines.</p>
+						<textarea class="text-left" rows="4" name="textinput" placeholder="Othello was written by Shakespeare.&#10;Othello is a tragedy."style="width:80%; box-sizing: border-box"></textarea><br><br>
+					-->
+					<div class="text-center" style="background-color:whitesmoke" id="field1">
+						<kt-document-stat-fyp-list [listvalue]="factlist" (listvalueChange)="this.factlist=$event"></kt-document-stat-fyp-list>
+						<!--	<input matInput style="width:90%; box-sizing: border-box" formControlName="facts" type="text" placeholder="Type something">
+							<button class="btn btn-success btn-add mt-sm-0 mb-sm-0 input-group-btn" type="button"><span class="glyphicon glyphicon-plus"></span></button>
+						-->	</div>
+					<br><h5>Upload essay below (Word limit: 500 words):</h5>
+					<!--	<p><small>To select multiple files, click "Choose Files", and hold down Shift while selecting files to upload.<br>Supported file types: .txt, .doc, .pdf</small></p>
+					-->	
+					<p><small>Supported file types: .txt, .doc, .pdf</small></p>
+					<br>
+							<input style="margin: auto; padding-left: 5%" class="text-center" type="file" id="fileselect" accept=".doc, .docx, .txt, .pdf" formControlName="file" (change)="onFileChange($event)"><br><br>
+						
+						<input id="btnSubmit" class="mb-5 mt-0 btn btn-info btn-lg" type="submit" value="Get My Score Report">
+						<!--<div id="loading" style="display: none">
+							<p>Processing Essay....<br>Please do not refresh page<br><img src="loader2.gif"/></p>
+						</div>-->
+					</form>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<div class="container-fluid">
+				<div class="row mt-5 mb-5">
+					<div class="col-md-6 text-center">
+						<img class="img-fluid mb-4" src="../../../../assets-vg/images/king.png" alt="kingimage" width="300px">
+					</div>
+					<div class="col-md-6 mt-1">
+						<h2 class="text-center mr-5 ml-5" style="font-size: 100%"><b>Your No.1 Supporter<br><br>Keep Up with Work. Keep Up with Marking.</b></h2><br>
+						<h4 class="text-center mr-5 ml-5" style="font-size: 100%; line-height: 1.2">KEEPUp Automated Essay Checker supports students and instructors by providing a simple and automated solution to providing essay feedback. Our machine-learning driven model takes into account multiple parameters from your essay, to perform comprehensive analysis, and provide to you a customized feedback report for your personal usage.  </h4>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<footer>
+			<div class="container-fluid" style="background-color: #EFEFEF">
+				<div class="row ml-sm-3 mr-sm-3">
+					<div class="col-sm-4 mt-4">
+						<img class="img-fluid mb-2" src="../../../../assets-vg/images/keep.png" alt="Keep Logo" width="90px">
+						<p><small>6/F, Hui Yeung Shing Building<br>The Chinese University of Hong Kong<br>Sha Tin, N.T. Hong Kong</small></p>
+					</div>
+					<div class="col-sm-2 mt-4">
+						<a class="text-dark" href="https://course.keep.edu.hk/"><small>KEEPCourse</small></a><br>
+						<a class="text-dark" href="https://poll.keep.edu.hk/"><small>KEEPoll</small></a><br>
+						<a class="text-dark" href="https://catalog.keep.edu.hk/"><small>KEEPCatalog</small></a><br>
+						<a class="text-dark" href="https://search.keep.edu.hk/"><small>KEEPSearch</small></a>
+					</div>
+					<div class="col-sm-2 mt-4">
+						<a class="text-dark" href="https://keep.edu.hk/en/news"><small>News</small></a><br>
+						<a class="text-dark" href="https://keep.edu.hk/en/events"><small>Events</small></a>
+					</div>
+					<div class="col-2 mt-4">
+						<a class="text-dark" href="https://keep.edu.hk/en/about"><small>About KEEP</small></a><br>
+						<a class="text-dark" href="https://keep.edu.hk/en/partners"><small>Partners</small></a><br>
+						<a class="text-dark" href="https://keep.edu.hk/en/team"><small>Team</small></a><br>
+						<a class="text-dark" href="https://keep.edu.hk/en/careers"><small>Careers</small></a><br>
+						<a class="text-dark" href="https://keep.edu.hk/en/media-kit"><small>Media Kit</small></a>
+					</div>
+					<div class="col-sm-2 mt-4">
+						<a class="text-dark" href="https://keep.edu.hk/en/contact"><small>Contact Us</small></a>
+					</div>
+				</div>
+				<div class="row mt-5 ml-sm-3 mr-sm-3">
+					<div class="col-sm-9 ">
+						<p><small>Copyright Ⓒ 2020 IK04. Anju Otsuka & Romario Timothy Vaz. All rights reserved.</small></p>
+					</div>
+					<div class="col-sm-3">
+						<p class="text-right">
+							<a href="https://keep.edu.hk/en/terms" class="text-dark"><small>Terms of Service</small></a> /
+							<a href="https://keep.edu.hk/en/privacy" class="text-dark"><small>Privacy</small></a> /
+							<a href="https://keep.edu.hk/en/cookies" class="text-dark"><small>Cookies</small></a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+		
+
+
+
+
 <!-- begin:: Content Head -->
 <div class="kt-subheader kt-grid__item" id="kt_subheader">
   <div class="" >
@@ -15,7 +249,6 @@
   </div>
 </div>
 <!-- end:: Content Head -->
-
 <!-- Widgets -->
 <div *ngFor='let row of docDataResult' class="row">
   <div *ngFor='let item of row | keyvalue' class="col-sm-4">
@@ -26,15 +259,245 @@
     </kt-portlet>
   </div>
 </div>
+</div>
+<div id="stats">
+<div *ngFor='let row of docDataResult'>
 
-<!-- Upload file form-->
+<div class="row row-col-separator-xl">
+				<div class="col-sm-6 col-md-6 col-lg-6 text-center">
+					<div class="row">
+						<div class="col-sm-12 col-md-12 col-lg-12">
+							<kt-portlet>	
+								<kt-portlet-header [title]="'Your Score Has Been Generated'"></kt-portlet-header>
+                                   				<kt-portlet-body [class]="'kt-portlet__body kt-portlet__body--fluid'">
+									<h6 class="text-left pl-1 pr-1">Your overall score is generated taking into consideration multiple components including your grammatical accuracy, readability, word selection, word variety, and cohesion, in addition to extensive aspects such as usage of synonyms, the psycholinguistic properties of words used, propriety as a piece of academic writing, and sentence fluency. Your overall score is representative of how well written your essay is. Note that your overall score does not take factual accuracy into consideration. The results of factual accuracy can be found further below. Furthermore, the readability score uses university level as a baseline for evaluation, where writing that closely resembles university level readability is awareded with a higher readability score. You may download a copy of these results by clicking the icon below. </h6>
+								</kt-portlet-body>
+							</kt-portlet>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-12 col-md-12 col-lg-12">
+							<kt-portlet>
+								<kt-portlet-body [class] = "'kt-portlet__body kt-portlet__body--fluid'">
+                                                                        <kt-widget4 [data]="widget4_1"> </kt-widget4>
+                                                                </kt-portlet-body>
+							</kt-portlet>
+						</div>
+					</div>	
+					<div class="row row-col-separator-xl">
+						<div class="col-sm-6 col-md-6 col-lg-6">
+						        <kt-portlet>
+                                        			<kt-portlet-body [class]="'kt-portlet__body'">
+                                                        	<!--<kt-widget26 [value]="95" [desc]="'Overall Score'" [options]="{}"></kt-widget26>-->
+                                                                	<kt-widgetDonut [data]="overallscore" ></kt-widgetDonut>
+                                                        	</kt-portlet-body>
+                                        		</kt-portlet>
+						</div>
+						<div class="col-sm-6 col-md-6 col-lg-6">
+							<kt-portlet>
+                                        			<kt-portlet-body [class]="'kt-portlet__body'">
+                                                        	<!--<kt-widget26 [value]="95" [desc]="'Overall Score'" [options]="{}"></kt-widget26>-->
+                                                                	<kt-widgetDonut2 [data]="accuracyscore"></kt-widgetDonut2>
+                                                        	</kt-portlet-body>
+                                        		</kt-portlet>
+						</div>
+					</div><!--
+					<div class="row row-col-separator-xl">
+                                		<div class="col-sm-12 col-md-12 col-lg-12">
+                                        		<kt-portlet>
+                                     					<div class="row">
+                                         					<div class="col">
+                                                                       			<kt-widget15 [data]="breakdown1"></kt-widget15>
+                                                                       		</div>
+                                                                       		<div class="col">
+                                                                                	<kt-widget15 [data]="breakdown2"></kt-widget15><br><br>
+                                                                      		</div>
+                                                                	</div>
+                                                                	<div class="row">
+                                                                       		<div class="col">
+                                                                                	<kt-widget15 [data]="breakdown3"></kt-widget15><br><br>
+                                                                      		</div>
+                                                                       		<div class="col">
+                                                                                	<kt-widget15 [data]="breakdown4"></kt-widget15><br><br>
+                                                                       		</div>
+                                                                	</div>
+                                        		</kt-portlet>
+						</div>
+					</div>-->
+                                </div>
+				 <div class="col-sm-6 col-md-6 col-lg-6 text-center">
+                                        <!--    <kt-portlet-header [title]="'Overall Performance'"></kt-portlet-header>-->
+                                        <!--<h3 class="mb-0 pb-0">Overall Performance</h3><br>-->
+                                        <kt-portlet>
+                                        	<kt-portlet-body [class]="'kt-portlet__body kt-portlet__body--fluid'">
+                                        		<kt-widgetRadar [data]="radarChartData"></kt-widgetRadar>
+                                                 </kt-portlet-body>
+                                        </kt-portlet>
+                                </div>
+			</div>
+			                                      <div class="row row-col-separator-xl">
+                                                <div class="col-sm-12 col-md-12 col-lg-12">
+                                                        <kt-portlet>
+								<kt-portlet-body>
+                                                                        <div class="row">
+                                                                                <div class="col">
+                                                                                        <kt-widget15  [data]="breakdown1" [desc]="'Grammatical Accuracy'"></kt-widget15>
+                                                                                </div>
+                                                                                <div class="col">
+                                                                                        <kt-widget15  [data]="breakdown2" [desc]="'Readability'"></kt-widget15><br><br>
+                                                                                </div>
+                                                                        </div>
+                                                                        <div class="row">
+                                                                                <div class="col">
+                                                                                        <kt-widget15  [data]="breakdown3" [desc]="'Word Variety'"></kt-widget15><br><br>
+                                                                                </div>
+                                                                                <div class="col">
+                                                                                        <kt-widget15   [data]="breakdown4" [desc]="'Word Choice'"></kt-widget15><br><br>
+                                                                                </div>
+                                                                        </div>
+								</kt-portlet-body>
+                                                        </kt-portlet>
+                                                </div>
+                                        </div>
+
+<!--
+<div class="col-sm-6 col-md-6 col-lg-6 text-center">-->
+					<!--<kt-portlet-header [title]="'Overall Score'"></kt-portlet-header>-->
+					<!--	<h3 class="mb-1 pb-0">Overall Score</h3><br>-->
+			<!--		<kt-portlet>	
+			<kt-portlet-body [class]="'kt-portlet__body kt-portlet__body--fluid'">-->
+							<!--<kt-widget26 [value]="95" [desc]="'Overall Score'" [options]="{}"></kt-widget26>-->
+					<!--			<kt-widgetDonut [title] = "'Overall Score'"></kt-widgetDonut>
+							</kt-portlet-body>
+			</kt-portlet>
+			<div class = "kt-space-20"></div>-->
+						<!--	<kt-portlet-header [title]="'Total Accuracy'"></kt-portlet-header>
+                                                        <kt-portlet-body [class]="'kt-portlet__body kt-portlet__body--fluid'">
+							 <kt-widget26 [value]="86" [desc]="'Total Accuracy'" [options]="{}"></kt-widget26>
+								<kt-widgetDonut></kt-widgetDonut>
+                                                        </kt-portlet-body>
+							-->
+							<!--
+						<div class="col-sm-12 col-md-12 col-lg-6">	
+								<kt-portlet-header [title]="'Score Breakdown'"></kt-portlet-header>
+								<kt-portlet-body [class] = "'kt-portlet__body kt-portlet__body--fluid'">
+									<kt-widget1 [data]="overallData"></kt-widget1>
+								</kt-portlet-body>
+						</div>
+						<div class="kt-space-10"></div>
+				               <div class="col-sm-12 col-md-12 col-lg-12 text-center">
+                                                                <kt-portlet-header [title]="'Download Report'"></kt-portlet-header>
+                                                                <kt-portlet-body [class] = "'kt-portlet__body kt-portlet__body--fluid'">
+                                                                        <kt-widget4 [data]="widget4_1">	</kt-widget4>
+								</kt-portlet-body> -->
+                    		
+					       
+					       
+								<!--</div-->
+			
+			<!--	<div class="col-sm-6 col-md-6 col-lg-6">
+					<kt-portlet>
+					<br><h5 class="pt-3">A breakdown of scores for individual components is shown below.</h5><br>
+				     <div class="row">
+                                          <div class="col">
+                                                                                                                        <kt-widget15 [data]="breakdown1"></kt-widget15>
+                                                                                                                </div>
+				     </div>
+				     <div class="row">
+                                                                                                                <div class="col">
+															<kt-widget15 [data]="breakdown2"></kt-widget15><br><br>
+                                                                                                                </div>
+                                                                                                        </div>
+                                                                                                        <div class="row">
+                                                                                                                <div class="col">
+															<kt-widget15 [data]="breakdown3"></kt-widget15><br><br>
+                                                                                                                </div>
+													</div>
+													<div class="row">
+                                                                                                                <div class="col">
+															<kt-widget15 [data]="breakdown4"></kt-widget15><br><br>
+                                                                                                                </div>
+                                                                                                        </div>
+					</kt-portlet>
+				
+				
+			</div> -->
+				<!--	<div class="col-sm-6 col-md-6 col-lg-6 text-center">-->
+					<!--	<kt-portlet-header [title]="'Overall Performance'"></kt-portlet-header>-->
+					<!--<h3 class="mb-0 pb-0">Overall Performance</h3><br>-->
+					<!--<kt-portlet>
+					<kt-portlet-body [class]="'kt-portlet__body kt-portlet__body--fluid'">
+					<kt-widgetRadar [data]="radarChartData"></kt-widgetRadar>
+						 </kt-portlet-body>
+					</kt-portlet>
+				</div>-->
+
+
+				<!--<div class="col-sm-6 col-md-6 col-lg-6 text-center">-->
+                                        <!--<kt-portlet-header [title]="'Overall Score'"></kt-portlet-header>-->
+                                        <!--    <h3 class="mb-1 pb-0">Overall Score</h3><br>-->
+                                        <!--<kt-portlet>    
+					<kt-portlet-body [class]="'kt-portlet__body kt-portlet__body--fluid'">-->
+                                                        <!--<kt-widget26 [value]="95" [desc]="'Overall Score'" [options]="{}"></kt-widget26>-->
+                                                               <!-- <kt-widgetDonut></kt-widgetDonut>
+                                                        </kt-portlet-body>
+					</kt-portlet>
+					<div class = "kt-space-20"></div>-->
+                                                <!--    <kt-portlet-header [title]="'Total Accuracy'"></kt-portlet-header>
+                                                        <kt-portlet-body [class]="'kt-portlet__body kt-portlet__body--fluid'">
+                                                         <kt-widget26 [value]="86" [desc]="'Total Accuracy'" [options]="{}"></kt-widget26>
+                                                                <kt-widgetDonut></kt-widgetDonut>
+                                                        </kt-portlet-body>
+                                                        -->
+                                                        <!--
+                                                <div class="col-sm-12 col-md-12 col-lg-6">      
+                                                                <kt-portlet-header [title]="'Score Breakdown'"></kt-portlet-header>
+                                                                <kt-portlet-body [class] = "'kt-portlet__body kt-portlet__body--fluid'">
+                                                                        <kt-widget1 [data]="overallData"></kt-widget1>
+                                                                </kt-portlet-body>
+                                                </div>
+                                                <div class="kt-space-10"></div>
+                                               <div class="col-sm-12 col-md-12 col-lg-12 text-center">
+                                                                <kt-portlet-header [title]="'Download Report'"></kt-portlet-header>
+                                                                <kt-portlet-body [class] = "'kt-portlet__body kt-portlet__body--fluid'">
+                                                                        <kt-widget4 [data]="widget4_1"> </kt-widget4>
+                                                                </kt-portlet-body> -->
+
+
+
+			<div class="row">
+				<div class="col-sm-12 col-md-12 col-lg-12">
+					<kt-portlet>
+						<kt-portlet-header [title]="'Cross-Fact Checking Results'"></kt-portlet-header>
+						<kt-portlet-body [class]="'kt-portlet__body'">
+							<kt-widget1 [data]="factData"></kt-widget1>
+						</kt-portlet-body>
+					</kt-portlet>
+					
+				</div>
+			</div>
+			<div class = "kt-space-10"></div>
+			<div class="row">
+                                <div class="col-sm-12 col-md-12 col-lg-12">
+					<kt-portlet>
+                                                <kt-portlet-header [title]="'Comments'"></kt-portlet-header>
+                                                <kt-portlet-body [class]="'kt-portlet__body kt-portlet__body--fluid'">
+                                                        <kt-widget1 [data]="comments"></kt-widget1>
+                                                </kt-portlet-body>
+					</kt-portlet>
+                                </div>
+                        </div>
+					       </div>
+				</div>
+					       <!-- Upload file form-->
+<!--
 <div class="row">
   <div class="col-sm-8">
-    <form class="kt-form" [formGroup]="uploadForm" (ngSubmit)="onSubmit()">
-      <mat-form-field class="example-full-width">
+	  <form class="kt-form" [formGroup]="uploadForm" (ngSubmit)="onSubmit()">-->
+      <!-- <mat-form-field class="example-full-width">
         <input matInput placeholder="Submission ID" formControlName="submission_id" />
-      </mat-form-field>
-
+      </mat-form-field> -->
+<!--
       <mat-form-field class="example-full-width">
         <input matInput placeholder="User ID" formControlName="user_id" />
       </mat-form-field>
@@ -51,16 +514,10 @@
     </form>
   </div>
 </div>
-
+-->
 <!-- User data table-->
+<!--
 <div class="row">
-  <div class="col-sm-12">
-    <kt-portlet [class]="'kt-portlet--height-fluid'">
-      <kt-portlet-header [title]="'User Table'" [class]="'kt-portlet__head--lg kt-portlet__head--noborder kt-portlet__head--break-sm'">
-      </kt-portlet-header>
-      <kt-portlet-body [class]="'kt-portlet__body--fit'">
-        <kt-user-table></kt-user-table>
-      </kt-portlet-body>
-    </kt-portlet>
-  </div>
-</div>
+	<div class="col-sm-12">-->
+</body>
+</html>
