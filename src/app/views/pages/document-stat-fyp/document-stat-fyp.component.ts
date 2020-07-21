@@ -250,7 +250,7 @@ export class DocumentStatFypComponent {
       );
 
     // emit value every 1s
-    let source = interval(1000);
+    let source = interval(3000);
     let isEven = val => true;
     let evenSource = source.pipe(filter(isEven));
     let evenNumberCount = evenSource.pipe(scan((acc, _) => acc + 1, 0));
