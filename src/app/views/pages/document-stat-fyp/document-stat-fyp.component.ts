@@ -6,8 +6,8 @@ import { FormControl, FormGroupDirective, NgForm, FormBuilder, FormGroup, Valida
 import { ErrorStateMatcher } from '@angular/material/core';
 import { MatFormFieldControl } from '@angular/material';
 
-import { interval } from 'rxjs';
-import { takeUntil, filter, scan, map, withLatestFrom } from 'rxjs/operators';
+import { of } from 'rxjs';
+import { filter, take, repeatWhen,  delay, tap, switchMap } from 'rxjs/operators';
 import { Widget4Data } from '../../partials/content/widgets/widget4/widget4.component';
 
 
@@ -18,12 +18,13 @@ import { Widget4Data } from '../../partials/content/widgets/widget4/widget4.comp
 })
 export class DocumentStatFypComponent {
   uuid: string;
-  userData: UserData;
+  userData: UserData[];
   docData: DocData;
   docDataResult: Array<{
     [key: string]: string | number
   }>;
   error: any;
+  newlastupdate: string = "init";
 
   submission_id: string;
   user_id: string;
@@ -164,10 +165,10 @@ export class DocumentStatFypComponent {
     this.route.params.subscribe( params => {
       // this.submissionId = params['submissionId'];
       this.uuid = params['uuid'];
-      
+
       this.showDocData(this.uuid);
     });
-    this.showUserData();
+    // this.showUserData();
     this.widget4_1 = [
          {
          pic: './assets/media/files/pdf.svg',
@@ -223,7 +224,8 @@ export class DocumentStatFypComponent {
 
   // }
   onSubmit() {
-
+    let that = this;
+    that.newlastupdate = (new Date()).getTime().toString();
 
     //this.uuid = this.route.params['uuid'];
 
@@ -249,35 +251,40 @@ export class DocumentStatFypComponent {
         error => this.error = error // error path
       );
 
-    // emit value every 1s
-    let source = interval(3000);
-    let isEven = val => true;
-    let evenSource = source.pipe(filter(isEven));
-    let evenNumberCount = evenSource.pipe(scan((acc, _) => acc + 1, 0));
-    let fiveEvenNumbers = evenNumberCount.pipe(filter(val => val > 25));
+    const fakeDelayedRequest3 = () => this.documentStatFypService.getUserData("23456");
 
-    let example = evenSource.pipe(
-      withLatestFrom(evenNumberCount),
-      map(([val, count]) => `Even number (${count}) : ${val}`),
-      takeUntil(fiveEvenNumbers)
+    const display = response => {
+      // document.open();
+      // document.write(response);
+      console.log(`display: ${JSON.stringify(response)}`)
+      return response
+    };
+
+    const poll = of({}).pipe(
+      delay(3000),
+      switchMap(_ => fakeDelayedRequest3()),
+      tap(display),
+      repeatWhen(obs => obs),
+      filter(data => data[data.length - 1].process_status === 'FINISHED'),
+      take(1),
+      delay(300)
     );
-    example.subscribe(val => {
-      this.docupdate = Date.now();
-      console.log(`${val} @ ${this.docupdate}`);
-      ///*
-      this.documentStatFypService.getUserData("23456")
-        .subscribe(
-          (data: UserData) => {
-	    this.userData = {
-              ...data
-	    };
-            console.log(`user: ${this.userData}`);
-	  }, // success path
-	  error => this.error = error // error path
-	);
-      //*/
+
+    poll.subscribe(result => {
+      that.newlastupdate = (new Date()).getTime().toString();
+      console.log(result);
+      that.userData = result;
+      window.scrollTo({
+        top: document.querySelector("html").scrollTop + 1,
+        left: document.querySelector("html").scrollLeft,
+        behavior: 'smooth'
+      });
+      window.scrollTo({
+        top: document.querySelector("html").scrollTop - 1,
+        left: document.querySelector("html").scrollLeft,
+        behavior: 'smooth'
+      });
     });
-    //this.fillChart(this.uuid);
 
   }
 

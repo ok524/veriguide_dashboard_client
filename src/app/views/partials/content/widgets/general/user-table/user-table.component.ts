@@ -30,7 +30,7 @@ export class UserTableComponent implements OnInit {
     'process_status',
     'created',
   ];
-  @Input() lastupdate: number;
+  @Input() lastupdate: string;
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
   @ViewChild(MatSort, {static: true}) sort: MatSort;
   selection = new SelectionModel<UserTableItemModel>(true, []);

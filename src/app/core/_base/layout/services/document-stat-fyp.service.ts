@@ -50,7 +50,7 @@ export class DocumentStatFypService {
 
   // /get_user
   getUserData(user_id :string) {
-    return this.http.get<UserData>(`${this.dataUrl}/get_user?user_id=${user_id}`);
+    return this.http.get<UserData[]>(`${this.dataUrl}/get_user?user_id=${user_id}`);
   }
 
   // /get
